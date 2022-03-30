@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.appli">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/nom_application"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
+
+        <activity
+            android:name=".Main8_gestion_user"
+            android:exported="false" />
+        <activity
+            android:name=".Main7_accueil"
+            android:exported="false" />
+        <activity
+            android:name=".Main6_log"
+            android:exported="false" />
+        <activity
+            android:name=".Main5_image"
+            android:exported="false" />
+        <activity
+            android:name=".Main4_boutton_admin"
+            android:exported="false" />
+        <activity
+            android:name=".Main3_boutton"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog.MinWidth"
+            />
+        <activity
+            android:name=".Main1_admins"
+            android:exported="false" />
+        <activity
+            android:name=".Main2_users"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:colorMode="@integer/material_motion_duration_medium_2">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

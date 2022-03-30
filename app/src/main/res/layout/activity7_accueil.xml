@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond_page"
+    tools:context=".Main7_accueil">
+
+    <LinearLayout
+        android:layout_width="446dp"
+        android:layout_height="345dp"
+        android:layout_marginTop="265dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+        tools:layout_editor_absoluteX="-18dp">
+
+        <Button
+            android:id="@+id/portail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/portail"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_video"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/users"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/users"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/log"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/deconnexion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/deconnexion"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="283dp"
+        android:layout_height="106dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="121dp">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="272dp"
+            android:layout_height="94dp"
+            android:text="Bienvenue, sélectionné votre menue!!"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond_page"
+    tools:context=".Main4_boutton_admin">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="370dp"
+        android:layout_height="350dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="354dp"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/FrameLayout"
+                        android:layout_width="347dp"
+                        android:layout_height="265dp">
+
+                        <ImageView
+                            android:id="@+id/image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/led_off" />
+
+                    </FrameLayout>
+
+                    <ToggleButton
+                        android:id="@+id/on"
+                        android:layout_width="270dp"
+                        android:layout_height="89dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/toggle_on"
+                        android:gravity="center"
+                        android:text="ToggleButton"
+                        android:textOff=" "
+                        android:textOn=" " />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="424dp"
+        android:layout_height="69dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView2">-->
+
+        <Button
+            android:id="@+id/users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/users"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/log"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/Image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/button_video"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"
+            android:textSize="9sp" />
+
+        <Button
+            android:id="@+id/retour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/retour"
+            android:textColor="@color/white"
+            android:background="@android:color/transparent"
+            android:textSize="9sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

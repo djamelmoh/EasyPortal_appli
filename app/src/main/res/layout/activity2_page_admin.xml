@@ -44,7 +44,7 @@
                 android:layout_gravity="center_horizontal"
                 android:orientation="vertical"
                 android:textColor="@color/white"
-                android:text="Valider"
+                android:text="Voir JSON"
                 android:textSize="22sp" />
 
             <Button

@@ -61,7 +61,7 @@ public class Main2_users extends AppCompatActivity {
                     Intent valider = new Intent(Main2_users.this, Main3_boutton.class);
                     startActivity(valider);
 
-                    if (email.getText().length() == 5 && mdp.getText().length() == 5) {
+                    if (email.getText().toString().equals("admin") && mdp.getText().toString().equals("12345")) {
                         //String toastMessage = "Username: " + email.getText().toString() + ", Password: " + mdp.getText().toString();
                         // Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
                         Intent valider1 = new Intent(Main2_users.this, Main7_accueil.class);

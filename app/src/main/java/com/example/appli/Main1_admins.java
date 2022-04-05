@@ -68,23 +68,23 @@ public class Main1_admins extends AppCompatActivity {
 
 
 
-                Intent launchactivity= new Intent(Main1_admins.this, Main7_accueil.class);
-                startActivity(launchactivity);
+//                Intent launchactivity= new Intent(Main1_admins.this, Main7_accueil.class);
+//                startActivity(launchactivity);
 
 
-                Button button_valider=(Button)findViewById(R.id.valider1);
-       button_valider.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View w)
-           {
-               Intent vereturnr= new Intent(Main1_admins.this, Main2_users.class);
-               startActivity(vereturnr);
-           }
+//                Button button_valider=(Button)findViewById(R.id.users);
+//       button_valider.setOnClickListener(new View.OnClickListener()
+//        {
+//            @Override
+//            public void onClick(View w)
+//           {
+//               Intent vereturnr= new Intent(Main1_admins.this, Main2_users.class);
+//               startActivity(vereturnr);
+//           }
+//
+//
+//        });
 
-
-        });
-//    }
 
             }
         });

@@ -24,19 +24,18 @@
             android:exported="false" />
         <activity
             android:name=".Main4_boutton_admin"
-            android:exported="false" />
+            android:exported="false"/>
+
         <activity
             android:name=".Main3_boutton"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.DayNight.Dialog.MinWidth"
-            />
+            android:theme="@style/Theme.AppCompat.Light.DialogWhenLarge"/>
         <activity
             android:name=".Main1_admins"
             android:exported="false" />
         <activity
             android:name=".Main2_users"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light"
             android:colorMode="@integer/material_motion_duration_medium_2">
 
             <intent-filter>

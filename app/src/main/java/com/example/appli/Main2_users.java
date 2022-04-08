@@ -56,20 +56,26 @@ public class Main2_users extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (email.getText().length() >0 && mdp.getText().length() > 0) {
-                    //String toastMessage = "Username: " + email.getText().toString() + ", Password: " + mdp.getText().toString();
-                    // Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
                     Intent valider = new Intent(Main2_users.this, Main3_boutton.class);
                     startActivity(valider);
 
                     if (email.getText().toString().equals("admin") && mdp.getText().toString().equals("12345")) {
-                        //String toastMessage = "Username: " + email.getText().toString() + ", Password: " + mdp.getText().toString();
-                        // Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
                         Intent valider1 = new Intent(Main2_users.this, Main7_accueil.class);
                         startActivity(valider1);
                     }
                 }
+                else if (email.getText().length() ==0 && mdp.getText().length() > 0) {
+                    String toastMessage = "L'identifiant n'est pas entré ";
+                    Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
+                }
+
+                else if (email.getText().length() >0 && mdp.getText().length() == 0) {
+                    String toastMessage = "Le mot de passe n'est pas entré ";
+                    Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
+                }
+
                 else {
-                    String toastMessage = "Pas de mdp+iden ";
+                    String toastMessage = "L'identifiant et le mot de passe ne sont pas entrés ";
                     Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
                 }
             }

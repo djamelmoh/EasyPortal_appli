@@ -46,7 +46,7 @@ public class Main1_admins extends AppCompatActivity {
                 String email = mail.getText().toString();    //creation d'un variable mail
                 String mdp = password.getText().toString();  //creation d'un variable mdp
                 //creation d'un variable url
-                String url ="https://d47bef93-a0a0-4b4b-9241-5f736ae724b0.mock.pstmn.io/user?username=<string>" +email+"&password="+mdp;
+                String url ="https://0d5987d2-70b7-4a7d-a8bd-6ee8c8d649dc.mock.pstmn.io/ajouterUtilisateur?username=djamelmoh&firstName=Djamel&lastName=Mohamedi&perm=admin<string>" +email+"&password="+mdp;
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {

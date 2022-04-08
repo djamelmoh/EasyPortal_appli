@@ -26,16 +26,6 @@
             android:textSize="10sp" />
 
         <Button
-            android:id="@+id/Image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/button_video"
-            android:textColor="@color/white"
-            android:background="@android:color/transparent"
-            android:textSize="9sp" />
-
-        <Button
             android:id="@+id/portail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -44,6 +34,16 @@
             android:textColor="@color/white"
             android:background="@android:color/transparent"
             android:textSize="8sp" />
+
+        <Button
+            android:id="@+id/Image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="@string/button_video"
+            android:textColor="@color/white"
+            android:textSize="9sp" />
 
         <Button
             android:id="@+id/retour"

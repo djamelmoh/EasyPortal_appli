@@ -18,23 +18,13 @@
 
 
         <Button
-            android:id="@+id/users"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/users"
-            android:textColor="@color/white"
-            android:background="@android:color/transparent"
-            android:textSize="10sp" />
-
-        <Button
             android:id="@+id/log"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:text="@string/log"
             android:textColor="@color/white"
-            android:background="@android:color/transparent"
             android:textSize="10sp" />
 
         <Button
@@ -42,10 +32,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:text="@string/portail"
             android:textColor="@color/white"
-            android:background="@android:color/transparent"
             android:textSize="8sp" />
+
+        <Button
+            android:id="@+id/users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:text="@string/users"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
 
         <Button
             android:id="@+id/retour"

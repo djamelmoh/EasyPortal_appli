@@ -45,10 +45,9 @@ public class Main1_admins extends AppCompatActivity {
                 // Debut de la requete GET
                 String email = mail.getText().toString();    //creation d'un variable mail
                 String mdp = password.getText().toString();  //creation d'un variable mdp
-//creation d'un variable url
-                String url ="https://f802cccc-d0d4-4a92-a4a7-9d99442afcff.mock.pstmn.io/utilisateurs?firstname=%3Cstring%3E&lastname=%3Cstring%3E&perm=%3Cstring%3E&plates=%3Carray/string%3E" +email+"&password="+mdp;
-                StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                        new Response.Listener<String>() {
+                //creation d'un variable url
+                String url ="https://d47bef93-a0a0-4b4b-9241-5f736ae724b0.mock.pstmn.io/user?username=<string>" +email+"&password="+mdp;
+                StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
                                 Toast.makeText(Main1_admins.this, response.trim(), Toast.LENGTH_SHORT).show();

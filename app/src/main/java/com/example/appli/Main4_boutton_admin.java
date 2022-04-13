@@ -25,14 +25,18 @@ public class Main4_boutton_admin extends AppCompatActivity {
         on = (ToggleButton) findViewById(R.id.on);
         image = (ImageView) findViewById(R.id.image);
 
+        //declartration pour le swith case
         on.setOnClickListener((v) -> {
             if (etat == false) {
 
+                //si faux (si on clique pas dessus, l'image du xml reste la même)
                 image.setImageResource(R.drawable.led_on);
                 on.setBackgroundResource(R.drawable.toggle_off);
                 etat = true;
 
-            } else if (etat == true) {
+            }
+            //si vrai (si on clique pas dessus, l'image change)
+            else if (etat == true) {
                 image.setImageResource(R.drawable.led_off);
                 on.setBackgroundResource(R.drawable.toggle_on);
                 etat = false;
@@ -40,12 +44,14 @@ public class Main4_boutton_admin extends AppCompatActivity {
 
 
         });
+//--------------------------------------------------------------------------------------------------
+//Barre de menue pour acceder au autre fonctionnalité de l'admin
 
         Button button_video = (Button) findViewById(R.id.Image);
         button_video.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent video = new Intent(Main4_boutton_admin.this, Main5_image.class);
+                Intent video = new Intent(Main4_boutton_admin.this, Main5_video.class);
                 startActivity(video);
             }
         });
@@ -83,5 +89,8 @@ public class Main4_boutton_admin extends AppCompatActivity {
 
 
         });
+
+//--------------------------------------------------------------------------------------------------
+
     }
 }

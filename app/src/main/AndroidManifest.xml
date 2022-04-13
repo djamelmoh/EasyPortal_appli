@@ -20,7 +20,7 @@
             android:name=".Main6_log"
             android:exported="false" />
         <activity
-            android:name=".Main5_image"
+            android:name=".Main5_video"
             android:exported="false" />
         <activity
             android:name=".Main4_boutton_admin"

@@ -13,6 +13,8 @@ public class Main8_gestion_user extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity8_gestion_user);
 
+//--------------------------------------------------------------------------------------------------
+//Barre de menue pour acceder au autre fonctionnalité de l'admin
         Button button = (Button) findViewById(R.id.portail);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,7 +28,7 @@ public class Main8_gestion_user extends AppCompatActivity {
         button_video.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent video = new Intent(Main8_gestion_user.this, Main5_image.class);
+                Intent video = new Intent(Main8_gestion_user.this, Main5_video.class);
                 startActivity(video);
             }
         });
@@ -50,5 +52,6 @@ public class Main8_gestion_user extends AppCompatActivity {
             }
 
         });
+//--------------------------------------------------------------------------------------------------
     }
 }

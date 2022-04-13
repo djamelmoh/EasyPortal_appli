@@ -14,6 +14,9 @@ public class Main7_accueil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity7_accueil);
 
+//--------------------------------------------------------------------------------------------------
+//Page d'accueil pour acceder au autre fonctionnalité de l'admin
+
         Button button = (Button) findViewById(R.id.portail);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,7 +30,7 @@ public class Main7_accueil extends AppCompatActivity {
         button_video.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent video = new Intent(Main7_accueil.this, Main5_image.class);
+                Intent video = new Intent(Main7_accueil.this, Main5_video.class);
                 startActivity(video);
             }
         });
@@ -56,11 +59,6 @@ public class Main7_accueil extends AppCompatActivity {
         });
 
 
-
-
-
-
-
         Button button_deconnexion = (Button) findViewById(R.id.deconnexion);
         button_deconnexion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +67,7 @@ public class Main7_accueil extends AppCompatActivity {
                 startActivity(deconnexion);
             }
         });
+//--------------------------------------------------------------------------------------------------
 
     }
 }

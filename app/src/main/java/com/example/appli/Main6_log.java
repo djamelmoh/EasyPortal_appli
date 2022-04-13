@@ -14,6 +14,9 @@ public class Main6_log extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity6_log);
 
+//--------------------------------------------------------------------------------------------------
+//Barre de menue pour acceder au autre fonctionnalité de l'admin
+
         Button button_portail = (Button) findViewById(R.id.portail);
         button_portail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,7 +30,7 @@ public class Main6_log extends AppCompatActivity {
         button_video.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent video = new Intent(Main6_log.this, Main5_image.class);
+                Intent video = new Intent(Main6_log.this, Main5_video.class);
                 startActivity(video);
             }
         });
@@ -54,5 +57,8 @@ public class Main6_log extends AppCompatActivity {
 
 
         });
+//--------------------------------------------------------------------------------------------------
+
+
     }
 }

@@ -25,14 +25,18 @@ public class Main3_boutton extends AppCompatActivity {
         on = (ToggleButton) findViewById(R.id.on);
         image = (ImageView) findViewById(R.id.image);
 
+        //declartration pour le swith case
         on.setOnClickListener((v) -> {
+            //si faux (si on clique pas dessus, l'image du xml reste la même)
             if (etat == false) {
 
                 image.setImageResource(R.drawable.led_on);
                 on.setBackgroundResource(R.drawable.toggle_off);
                 etat = true;
 
-            } else if (etat == true) {
+            }
+            //si vrai (si on clique pas dessus, l'image change)
+            else if (etat == true) {
                 image.setImageResource(R.drawable.led_off);
                 on.setBackgroundResource(R.drawable.toggle_on);
                 etat = false;
@@ -41,12 +45,14 @@ public class Main3_boutton extends AppCompatActivity {
 
 
         });
+
+        //variable boutton deconnexion
         Button button_retour = (Button) findViewById(R.id.retour);
         button_retour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent retour = new Intent(Main3_boutton.this, Main2_users.class);
-                startActivity(retour);
+                Intent deconnexion = new Intent(Main3_boutton.this, Main2_users.class);
+                startActivity(deconnexion);
             }
 
 

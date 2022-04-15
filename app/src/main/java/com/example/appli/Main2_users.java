@@ -61,6 +61,7 @@ public class Main2_users extends AppCompatActivity {
             public void onClick(View v) {
                 //si la lignes email et mots ont des caracteres alors:
                 if (email.getText().length() >0 && mdp.getText().length() > 0) {
+                  
                     //redirection vers de la page 2 à 3
                     Intent valider = new Intent(Main2_users.this, Main3_boutton.class);
                     startActivity(valider);

@@ -39,17 +39,6 @@ public class Main2_users extends AppCompatActivity {
             }
         });
 //---------------------------------------------------------------------------------------------------
-//        Button button_valider=(Button)findViewById(R.id.valider1);
-//        button_valider.setOnClickListener(new View.OnClickListener()
-//        {
-//            @Override
-//            public void onClick(View w)
-//            {
-//
-//            }
-//
-//
-//        });
 
 //-------------------------------------------------------------------------------------------------------------------
 //code pour la securité en local
@@ -59,6 +48,7 @@ public class Main2_users extends AppCompatActivity {
         valider1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 //si la lignes email et mots ont des caracteres alors:
                 if (email.getText().length() >0 && mdp.getText().length() > 0) {
                   
@@ -98,6 +88,13 @@ public class Main2_users extends AppCompatActivity {
 
         });
     }
+//    @Override
+//    protected void onPreExecute() {
+//        super.onPreExecute();
+//        System.out.println("Pre execution starting");
+//        Toast.makeText(LogIn.this, "Executing..", Toast.LENGTH_SHORT).show();
+//
+//    }
 }
 
 

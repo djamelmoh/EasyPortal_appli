@@ -40,8 +40,8 @@
 
             <ToggleButton
                 android:id="@+id/on"
-                android:layout_width="324dp"
-                android:layout_height="wrap_content"
+                android:layout_width="196dp"
+                android:layout_height="142dp"
                 android:layout_gravity="center"
                 android:background="@drawable/toggle_on"
                 android:gravity="center"

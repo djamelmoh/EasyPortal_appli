@@ -39,7 +39,7 @@
                 android:id="@+id/mdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#FAF7F7"
+                android:backgroundTint="#FFFFFF"
                 android:ems="10"
                 android:inputType="textPassword"
                 android:textColor="@color/white"

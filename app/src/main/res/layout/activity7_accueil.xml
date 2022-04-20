@@ -14,48 +14,50 @@
         android:orientation="vertical"
         android:padding="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout2"
-        tools:layout_editor_absoluteX="-18dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2">
 
         <Button
             android:id="@+id/portail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             android:text="@string/portail"
-            android:textColor="@color/white"
-            android:background="@android:color/transparent"/>
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             android:text="@string/button_video"
-            android:textColor="@color/white"
-            android:background="@android:color/transparent"/>
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/users"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             android:text="@string/users"
-            android:textColor="@color/white"
-            android:background="@android:color/transparent"/>
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/log"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             android:text="@string/log"
-            android:textColor="@color/white"
-            android:background="@android:color/transparent"/>
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/deconnexion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             android:text="@string/deconnexion"
-            android:textColor="@color/white"
-            android:background="@android:color/transparent"/>
+            android:textColor="@color/white" />
 
     </LinearLayout>
 

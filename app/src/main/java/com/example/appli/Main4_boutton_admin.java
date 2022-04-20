@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 import android.os.Bundle;
 import android.widget.FrameLayout;
@@ -30,19 +31,49 @@ public class Main4_boutton_admin extends AppCompatActivity {
             if (etat == false) {
 
                 //si faux (si on clique pas dessus, l'image du xml reste la même)
+                for(int j=8; j>0;j--){
+                    String toastMessage = "Le portail s'ouvre. Temps d'attente "+j+" secondes ";
+                    Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
+                }
+
                 image.setImageResource(R.drawable.led_on);
                 on.setBackgroundResource(R.drawable.toggle_off);
                 etat = true;
 
+                try {
+                    for (int i = 0; i < 2; i++) {
+                        Thread.sleep(1000);
+                        System.out.println("Sleep "+i);
+                    }
+                }   catch(Exception e) {
+                    System.out.println(e);
+                }
             }
+
+
             //si vrai (si on clique pas dessus, l'image change)
             else if (etat == true) {
+                for(int j=8; j>0;j--){
+                    String toastMessage = "Le portail se ferme. Temps d'attente "+j+" secondes ";
+                    Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
+
+                }
+
                 image.setImageResource(R.drawable.led_off);
                 on.setBackgroundResource(R.drawable.toggle_on);
                 etat = false;
+
+                try {
+                    for (int i = 0; i < 2; i++) {
+                        Thread.sleep(1000);
+                        System.out.println("Sleep "+i);
+                    }
+                }   catch(Exception e) {
+                    System.out.println(e);
+                }
+
+
             }
-
-
         });
 //--------------------------------------------------------------------------------------------------
 //Barre de menue pour acceder au autre fonctionnalité de l'admin

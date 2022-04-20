@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 import android.os.Bundle;
 import android.widget.FrameLayout;
@@ -32,17 +33,29 @@ public class Main3_boutton extends AppCompatActivity {
 
                 image.setImageResource(R.drawable.led_on);
                 on.setBackgroundResource(R.drawable.toggle_off);
-                etat = true;
+                for(int j=5; j>0;j--){
+                    String toastMessage = "Le portail s'ouvre. Temps d'attente "+j+" secondes ";
+                    Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
 
-            }
+
+                    etat = true;
+                }}
+
+
             //si vrai (si on clique pas dessus, l'image change)
             else if (etat == true) {
+
                 image.setImageResource(R.drawable.led_off);
                 on.setBackgroundResource(R.drawable.toggle_on);
-                etat = false;
+                for (int j = 5; j > 0; j--) {
+                    String toastMessage = "Le portail se ferme. Temps d'attente " + j + " secondes ";
+                    Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
+
+
+                    etat = true;
+                }
+
             }
-
-
 
         });
 

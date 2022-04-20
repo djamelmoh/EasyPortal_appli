@@ -46,13 +46,14 @@ public class Main1_admins extends AppCompatActivity {
                 String email = mail.getText().toString();    //creation d'un variable mail
                 String mdp = password.getText().toString();  //creation d'un variable mdp
                 //creation d'un variable url
-                String url ="https://0d5987d2-70b7-4a7d-a8bd-6ee8c8d649dc.mock.pstmn.io/ajouterUtilisateur?username=djamelmoh&firstName=Djamel&lastName=Mohamedi&perm=admin<string>" +email+"&password="+mdp;
+                // String url ="https://0d5987d2-70b7-4a7d-a8bd-6ee8c8d649dc.mock.pstmn.io/ajouterUtilisateur?username=djamelmoh&firstName=Djamel&lastName=Mohamedi&perm=admin<string>" +email+"&password="+mdp;
+                String url ="http://51.210.151.13/btssnir/projets2022/easyportal/api/utilisateurs.php" ;
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                Toast.makeText(Main1_admins.this, response.trim(), Toast.LENGTH_SHORT).show();
-                            }
-                        },
+                    @Override
+                    public void onResponse(String response) {
+                        Toast.makeText(Main1_admins.this, response.trim(), Toast.LENGTH_SHORT).show();
+                    }
+                },
                         new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {

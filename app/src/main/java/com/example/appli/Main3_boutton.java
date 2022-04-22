@@ -28,18 +28,29 @@ public class Main3_boutton extends AppCompatActivity {
 
         //declartration pour le swith case
         on.setOnClickListener((v) -> {
-            //si faux (si on clique pas dessus, l'image du xml reste la même)
             if (etat == false) {
 
                 image.setImageResource(R.drawable.led_on);
                 on.setBackgroundResource(R.drawable.toggle_off);
-                for(int j=5; j>0;j--){
+                //si faux (si on clique pas dessus, l'image du xml reste la même)
+                for(int j=8; j>0;j--){
                     String toastMessage = "Le portail s'ouvre. Temps d'attente "+j+" secondes ";
                     Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
+                }
 
 
-                    etat = true;
-                }}
+                etat = true;
+
+                try {
+                    for (int i = 0; i < 8; i++) {
+                        Thread.sleep(1000);
+                        System.out.println("Sleep "+i);
+                    }
+                }   catch(Exception e) {
+                    System.out.println(e);
+                }
+
+            }
 
 
             //si vrai (si on clique pas dessus, l'image change)
@@ -47,16 +58,27 @@ public class Main3_boutton extends AppCompatActivity {
 
                 image.setImageResource(R.drawable.led_off);
                 on.setBackgroundResource(R.drawable.toggle_on);
-                for (int j = 5; j > 0; j--) {
-                    String toastMessage = "Le portail se ferme. Temps d'attente " + j + " secondes ";
+
+                for(int j=8; j>0;j--){
+                    String toastMessage = "Le portail se ferme. Temps d'attente "+j+" secondes ";
                     Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
 
-
-                    etat = true;
                 }
 
-            }
 
+                etat = false;
+
+                try {
+                    for (int i = 0; i < 8; i++) {
+                        Thread.sleep(1000);
+                        System.out.println("Sleep "+i);
+                    }
+                }   catch(Exception e) {
+                    System.out.println(e);
+                }
+
+
+            }
         });
 
         //variable boutton deconnexion

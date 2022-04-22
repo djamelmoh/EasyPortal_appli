@@ -61,11 +61,20 @@
 
     </LinearLayout>
 
-    <VideoView
-        android:id="@+id/videoView"
-        android:layout_width="414dp"
-        android:layout_height="347dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="101dp" />
+    <LinearLayout
+        android:layout_width="393dp"
+        android:layout_height="499dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="93dp">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="495dp"
+            android:layout_centerInParent="true" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.Button;
 
 public class Main2_users extends AppCompatActivity {
-    //declaration variable
+    ///declaration variable
     private EditText email;
     private EditText mdp;
     private Button valider1;

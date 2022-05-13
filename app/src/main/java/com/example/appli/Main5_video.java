@@ -8,7 +8,16 @@ import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.VideoView;
 
 public class Main5_video extends AppCompatActivity {
 
@@ -18,8 +27,15 @@ public class Main5_video extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity5_video_admin);
 
+//        final VideoView videoView;
+//        videoView = (VideoView)findViewById(R.id.videoView);
+//        videoView.setVideoPath("http://91.81.88.254/");
+//        videoView.start();
+
+
+
 //--------------------------------------------------------------------------------------------------
-//Barre de menue pour acceder au autre fonctionnalité de l'admin
+        //Barre de menue pour acceder au autre fonctionnalité de l'admin
 
         Button button_user = (Button) findViewById(R.id.users);
         button_user.setOnClickListener(new View.OnClickListener() {
@@ -62,38 +78,45 @@ public class Main5_video extends AppCompatActivity {
                 startActivity(portail);
             }
         });
+
 //--------------------------------------------------------------------------------------------------
-        String videoUrl = "http://172.16.200.147:8081";
+        String videoUrl = "http://91.81.88.254/";
 
 
-            // finding videoview by its id
+
+             // trouver videoview par son identifiant
             VideoView videoView = findViewById(R.id.videoView);
 
-            // Uri object to refer the
-            // resource from the videoUrl
+              // Objet Uri pour référencer le
+             // ressource de la videoUrl
             Uri uri = Uri.parse(videoUrl);
 
-            // sets the resource from the
-            // videoUrl to the videoView
+             // définit la ressource à partir du
+            // videoUrl vers la videoView
             videoView.setVideoURI(uri);
 
-            // creating object of
-            // media controller class
+             // création de l'objet de
+            // classe de contrôleur multimédia
             MediaController mediaController = new MediaController(this);
 
-            // sets the anchor view
-            // anchor view for the videoView
+             // définit la vue d'ancrage
+            // vue d'ancrage pour la vidéoView
             mediaController.setAnchorView(videoView);
 
-            // sets the media player to the videoView
+            // définit le lecteur multimédia sur la vidéoView
             mediaController.setMediaPlayer(videoView);
 
-            // sets the media controller to the videoView
+            // définit le contrôleur multimédia sur la vidéoView
             videoView.setMediaController(mediaController);
 
-            // starts the video
+            // démarre la vidéo
             videoView.start();
         }
     }
+
+
+
+
+
 
 

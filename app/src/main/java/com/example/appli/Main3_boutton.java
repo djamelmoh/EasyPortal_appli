@@ -28,58 +28,46 @@ public class Main3_boutton extends AppCompatActivity {
 
         //declartration pour le swith case
         on.setOnClickListener((v) -> {
-            if (etat == false) {
+                    if (etat == false) {
 
-                image.setImageResource(R.drawable.led_on);
-                on.setBackgroundResource(R.drawable.toggle_off);
-                //si faux (si on clique pas dessus, l'image du xml reste la même)
-                for(int j=8; j>0;j--){
-                    String toastMessage = "Le portail s'ouvre. Temps d'attente "+j+" secondes ";
-                    Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
-                }
+                        image.setImageResource(R.drawable.led_on);
+                        on.setBackgroundResource(R.drawable.toggle_off);
+                        //si faux (si on clique pas dessus, l'image du xml reste la même)
+                        etat = true;
 
-
-                etat = true;
-
-                try {
-                    for (int i = 0; i < 8; i++) {
-                        Thread.sleep(1000);
-                        System.out.println("Sleep "+i);
+                        for (int j = 8; j > 0; j--) {
+                            String toastMessage = "Le portail s'ouvre. Temps d'attente " + j + " secondes ";
+                            Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
+                        }
                     }
-                }   catch(Exception e) {
-                    System.out.println(e);
-                }
-
-            }
 
 
-            //si vrai (si on clique pas dessus, l'image change)
-            else if (etat == true) {
+//                try {
+//                    for (int i = 0; i < 8; i++) {
+//                        Thread.sleep(1000);
+//                        System.out.println("Sleep "+i);
+//                    }
+//                }   catch(Exception e) {
+//                    System.out.println(e);
+//                }
+//
+//            }
 
-                image.setImageResource(R.drawable.led_off);
-                on.setBackgroundResource(R.drawable.toggle_on);
 
-                for(int j=8; j>0;j--){
-                    String toastMessage = "Le portail se ferme. Temps d'attente "+j+" secondes ";
-                    Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
+                    //si vrai (si on clique pas dessus, l'image change)
+                    else if (etat == true) {
 
-                }
+                        image.setImageResource(R.drawable.led_off);
+                        on.setBackgroundResource(R.drawable.toggle_on);
+                        etat = false;
 
-
-                etat = false;
-
-                try {
-                    for (int i = 0; i < 8; i++) {
-                        Thread.sleep(1000);
-                        System.out.println("Sleep "+i);
+                        for (int j = 8; j > 0; j--) {
+                            String toastMessage = "Le portail se ferme. Temps d'attente " + j + " secondes ";
+                            Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
+                        }
                     }
-                }   catch(Exception e) {
-                    System.out.println(e);
-                }
 
-
-            }
-        });
+                });
 
         //variable boutton deconnexion
         Button button_retour = (Button) findViewById(R.id.retour);

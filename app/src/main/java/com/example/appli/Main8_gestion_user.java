@@ -13,6 +13,7 @@ public class Main8_gestion_user extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity8_gestion_user);
 
+
 //--------------------------------------------------------------------------------------------------
 //Barre de menue pour acceder au autre fonctionnalité de l'admin
         Button button = (Button) findViewById(R.id.portail);
@@ -53,5 +54,7 @@ public class Main8_gestion_user extends AppCompatActivity {
 
         });
 //--------------------------------------------------------------------------------------------------
+
+
     }
 }

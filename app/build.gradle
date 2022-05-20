@@ -1,8 +1,16 @@
 plugins {
     id 'com.android.application'
 }
+dependencies {
+    // Other dependencies
+    // ...
+    implementation 'org.videolan.android:libvlc-all:3.4.4'
+}
+
+
 
 android {
+    useLibrary 'org.apache.http.legacy'
     compileSdk 32
 
     defaultConfig {

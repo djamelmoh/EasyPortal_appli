@@ -76,7 +76,6 @@ public class Main2_users extends AppCompatActivity {
 
                                 if(success[0]==true)
                                 {
-
                                     if(status[0]==2)
                                     {
                                         Intent redirection= new Intent(Main2_users.this, Main7_accueil.class);
@@ -86,14 +85,14 @@ public class Main2_users extends AppCompatActivity {
                                     {
                                         Intent redirection1= new Intent(Main2_users.this, Main3_boutton.class);
                                         startActivity(redirection1);
+                                        Toast.makeText(Main2_users.this, "Accès à l'ouverture du portail.", Toast.LENGTH_SHORT).show();
                                     }
-                                    }
+                                }
 
                                 else
                                 {
-                                    Toast.makeText(Main2_users.this, "Email ou mot de passe incorrect", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Main2_users.this, "L'utilisateur ou le mot de passe n'est pas reconnu dans la base de donnée.", Toast.LENGTH_SHORT).show();
                                 }
-                                Toast.makeText(Main2_users.this, url.toString(), Toast.LENGTH_SHORT).show();
                             }
                         },
                         new Response.ErrorListener() {

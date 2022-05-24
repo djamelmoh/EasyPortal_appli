@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.VideoView;
@@ -19,6 +20,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.VideoView;
 
+
 public class Main5_video extends AppCompatActivity {
 
 
@@ -26,6 +28,9 @@ public class Main5_video extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity5_video_admin);
+
+        WebView myWebView = (WebView) findViewById(R.id.webview);
+        myWebView.loadUrl("http://91.81.88.254/");
 
 //        final VideoView videoView;
 //        videoView = (VideoView)findViewById(R.id.videoView);
@@ -80,37 +85,37 @@ public class Main5_video extends AppCompatActivity {
         });
 
 //--------------------------------------------------------------------------------------------------
-        String videoUrl = "http://91.81.88.254/";
-
-
-
-             // trouver videoview par son identifiant
-            VideoView videoView = findViewById(R.id.videoView);
-
-              // Objet Uri pour référencer le
-             // ressource de la videoUrl
-            Uri uri = Uri.parse(videoUrl);
-
-             // définit la ressource à partir du
-            // videoUrl vers la videoView
-            videoView.setVideoURI(uri);
-
-             // création de l'objet de
-            // classe de contrôleur multimédia
-            MediaController mediaController = new MediaController(this);
-
-             // définit la vue d'ancrage
-            // vue d'ancrage pour la vidéoView
-            mediaController.setAnchorView(videoView);
-
-            // définit le lecteur multimédia sur la vidéoView
-            mediaController.setMediaPlayer(videoView);
-
-            // définit le contrôleur multimédia sur la vidéoView
-            videoView.setMediaController(mediaController);
-
-            // démarre la vidéo
-            videoView.start();
+//        String videoUrl = "http://91.81.88.254/";
+//
+//
+//
+//             // trouver videoview par son identifiant
+//            VideoView videoView = findViewById(R.id.videoView);
+//
+//              // Objet Uri pour référencer le
+//             // ressource de la videoUrl
+//            Uri uri = Uri.parse(videoUrl);
+//
+//             // définit la ressource à partir du
+//            // videoUrl vers la videoView
+//            videoView.setVideoURI(uri);
+//
+//             // création de l'objet de
+//            // classe de contrôleur multimédia
+//            MediaController mediaController = new MediaController(this);
+//
+//             // définit la vue d'ancrage
+//            // vue d'ancrage pour la vidéoView
+//            mediaController.setAnchorView(videoView);
+//
+//            // définit le lecteur multimédia sur la vidéoView
+//            mediaController.setMediaPlayer(videoView);
+//
+//            // définit le contrôleur multimédia sur la vidéoView
+//            videoView.setMediaController(mediaController);
+//
+//            // démarre la vidéo
+//            videoView.start();
         }
     }
 

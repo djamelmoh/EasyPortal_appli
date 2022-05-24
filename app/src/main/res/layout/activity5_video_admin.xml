@@ -66,15 +66,14 @@
         android:layout_height="499dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="93dp">
+        tools:layout_editor_absoluteY="107dp">
 
-        <VideoView
-            android:id="@+id/videoView"
+        <WebView
+            android:id="@+id/webview"
             android:layout_width="match_parent"
-            android:layout_height="495dp"
-            android:layout_centerInParent="true" />
+            android:layout_height="418dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

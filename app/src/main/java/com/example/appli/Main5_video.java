@@ -86,41 +86,8 @@ public class Main5_video extends AppCompatActivity {
                 startActivity(portail);
             }
         });
-
-//--------------------------------------------------------------------------------------------------
-//        String videoUrl = "http://91.81.88.254/";
-//
-//
-//
-//             // trouver videoview par son identifiant
-//            VideoView videoView = findViewById(R.id.videoView);
-//
-//              // Objet Uri pour référencer le
-//             // ressource de la videoUrl
-//            Uri uri = Uri.parse(videoUrl);
-//
-//             // définit la ressource à partir du
-//            // videoUrl vers la videoView
-//            videoView.setVideoURI(uri);
-//
-//             // création de l'objet de
-//            // classe de contrôleur multimédia
-//            MediaController mediaController = new MediaController(this);
-//
-//             // définit la vue d'ancrage
-//            // vue d'ancrage pour la vidéoView
-//            mediaController.setAnchorView(videoView);
-//
-//            // définit le lecteur multimédia sur la vidéoView
-//            mediaController.setMediaPlayer(videoView);
-//
-//            // définit le contrôleur multimédia sur la vidéoView
-//            videoView.setMediaController(mediaController);
-//
-//            // démarre la vidéo
-//            videoView.start();
-        }
     }
+}
 
 
 

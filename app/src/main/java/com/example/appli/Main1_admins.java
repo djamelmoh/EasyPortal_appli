@@ -45,7 +45,7 @@ public class Main1_admins extends AppCompatActivity {
         mail = (EditText)findViewById(R.id.mail);
         password = (EditText)findViewById(R.id.password);
         final boolean[] succes = new boolean[1];
-        final int[] grade = new int[1];
+        final int[] perm = new int[1];
 
         final Button button=(Button)findViewById(R.id.valider1);
         button.setOnClickListener(new View.OnClickListener()
@@ -56,35 +56,43 @@ public class Main1_admins extends AppCompatActivity {
                 // Debut GET
                 String mail1 = mail.getText().toString();
                 String password1 = password.getText().toString();
-                String url = "http://51.210.151.13/btssnir/projets2022/easyportal/api/utilisateurs.php?adresseMail="+mail1+"&password="+password1;
+                String url = "http://51.210.151.13/btssnir/projets2022/easyportal/api/utilisateurs.php?username="+mail1+"&password="+password1;
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
-                                if(response!=null){
+                                if (response != null)
+                                {
                                     JSONObject jObject = null;
-                                    try {
+                                    try
+                                    {
                                         jObject = new JSONObject(response);
                                         succes[0] = jObject.getBoolean("succes");
-                                        System.out.println("test : "+ succes[0]);
-                                    } catch (JSONException e) {
+                                        perm[0] = jObject.getInt("perm");
+                                        System.out.println("test : " + succes[0]);
+                                    }
+                                    catch (JSONException e)
+                                    {
                                         e.printStackTrace();
                                     }
                                 }
-
-                                if(succes[0]==true)
+                                if (succes[0] == true)
                                 {
-                                   Intent launchactivity= new Intent(Main1_admins.this, Main6_log.class);
+                                    if (perm[0] == 1)
+                                    {
+                                        Intent launchactivity = new Intent(Main1_admins.this, Main6_log.class);
+                                    }
+                                    else
+                                    {
+                                        Toast.makeText(Main1_admins.this, "pas ok", Toast.LENGTH_SHORT).show();
+                                    }
+                                    Toast.makeText(Main1_admins.this, url.toString(), Toast.LENGTH_SHORT).show();
                                 }
-
                                 else
                                 {
-                                   Toast.makeText(Main1_admins.this, "Email ou mot de passe incorrect", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Main1_admins.this, "Email ou mot de passe incorrect", Toast.LENGTH_SHORT).show();
                                 }
-
-                                Toast.makeText(Main1_admins.this, url.toString(), Toast.LENGTH_SHORT).show();
-                              }
-                        },
+                            } },
                         new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {

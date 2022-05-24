@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class Main6_log extends AppCompatActivity {
 
@@ -13,6 +14,9 @@ public class Main6_log extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity6_log);
+
+        String url = "http://51.210.151.13/btssnir/projets2022/easyportal/api/log.php";
+        Toast.makeText(Main6_log.this, url, Toast.LENGTH_SHORT).show();
 
 //--------------------------------------------------------------------------------------------------
 //Barre de menue pour acceder au autre fonctionnalité de l'admin

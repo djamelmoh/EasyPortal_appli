@@ -35,7 +35,8 @@ public class Main3_boutton extends AppCompatActivity {
                         //si faux (si on clique pas dessus, l'image du xml reste la même)
                         etat = true;
 
-                        for (int j = 8; j > 0; j--) {
+                        for (int j = 8; j > 0; j--)
+                        {
                             String toastMessage = "Le portail s'ouvre. Temps d'attente " + j + " secondes ";
                             Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
                         }

@@ -33,7 +33,9 @@ public class Main5_video extends AppCompatActivity {
         WebView myWebView = (WebView) findViewById(R.id.webview);
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        myWebView.loadUrl("http://91.81.88.254/");
+        myWebView.loadUrl("http://172.16.202.64:8081");
+//        myWebView.loadUrl("http://91.81.88.254/");
+
 
 //        final VideoView videoView;
 //        videoView = (VideoView)findViewById(R.id.videoView);

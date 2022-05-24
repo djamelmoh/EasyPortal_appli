@@ -1,100 +1,113 @@
 package com.example.appli;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
+import java.io.Serializable;
+import java.lang.reflect.Type;
 
-import android.widget.Toast;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Build;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.content.SharedPreferences;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Main2_users extends AppCompatActivity {
-    //declaration variable
-    private EditText email;
-    private EditText mdp;
-    private Button valider1;
+
+    EditText mail;
+    EditText password;
+    Button btn;
+    int id;
+    String name;
+    String info;
+    String reponse1;
+    TextView test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity1_page_user);//page xml
+        setContentView(R.layout.activity1_page_user);
 
+        mail = (EditText)findViewById(R.id.email);
+        password = (EditText)findViewById(R.id.mdp);
+        final boolean[] success = new boolean[1];
+        final int[] status = new int[1];
 
-
-
-
-//---------------------------------------------------------------------------------------------------
-//cette partie du code sert à aller de la page user à admin
-                Button button_admin=(Button)findViewById(R.id.admin);
-        button_admin.setOnClickListener(new View.OnClickListener()
+        final Button button=(Button)findViewById(R.id.valider1);
+        button.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                //redirection de la page 2 à la 1
-                //admin est un bouton
-                Intent admin= new Intent(Main2_users.this, Main1_admins.class);
-                startActivity(admin);
+                // Debut GET
+                String email = mail.getText().toString();
+                String mdp = password.getText().toString();
+                String url = "http://51.210.151.13/btssnir/projets2022/easyportal/api/connexion.php?username="+email+"&password="+mdp;
+                StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+
+                                if(response!=null){
+                                    JSONObject jObject = null;
+                                    try {
+                                        jObject = new JSONObject(response);
+                                        success[0] = jObject.getBoolean("success");
+                                        status[0] = jObject.getInt("status");
+                                        System.out.println("test : "+ success[0]);
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+
+                                }
+
+                                if(success[0]==true)
+                                {
+
+                                    if(status[0]==2)
+                                    {
+                                        Intent redirection= new Intent(Main2_users.this, Main7_accueil.class);
+                                        startActivity(redirection);
+                                    }
+                                    else if(status[0]==1)
+                                    {
+                                        Intent redirection1= new Intent(Main2_users.this, Main3_boutton.class);
+                                        startActivity(redirection1);
+                                    }
+                                    }
+
+                                else
+                                {
+                                    Toast.makeText(Main2_users.this, "Email ou mot de passe incorrect", Toast.LENGTH_SHORT).show();
+                                }
+                                Toast.makeText(Main2_users.this, url.toString(), Toast.LENGTH_SHORT).show();
+                            }
+                        },
+                        new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                Toast.makeText(Main2_users.this, error.toString(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
+                RequestQueue requestQueue = Volley.newRequestQueue(Main2_users.this);
+                requestQueue.add(stringRequest);
+
+                // Fin GET
             }
-        });
-//---------------------------------------------------------------------------------------------------
-
-//-------------------------------------------------------------------------------------------------------------------
-//code pour la securité en local
-        email = findViewById(R.id.email);
-        mdp = findViewById(R.id.mdp);
-        valider1 = findViewById(R.id.valider1);
-        valider1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //si la lignes email et mots ont des caracteres alors:
-                if (email.getText().length() >0 && mdp.getText().length() > 0) {
-                  
-                    //redirection vers de la page 2 à 3
-                    Intent valider = new Intent(Main2_users.this, Main3_boutton.class);
-                    startActivity(valider);
-
-                    //si email=admin et mdp=12345
-                    if (email.getText().toString().equals("admin") && mdp.getText().toString().equals("12345")) {
-                        //redirection vers de la page 2 à 7
-                        Intent valider1 = new Intent(Main2_users.this, Main7_accueil.class);
-                        startActivity(valider1);
-                    }
-                }
-
-                //s'il n'y a pas d'identifiant
-                else if (email.getText().length() ==0 && mdp.getText().length() > 0) {
-                    //alors il affiche le message suivant
-                    String toastMessage = "L'identifiant n'est pas entré ";
-                    Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
-                }
-
-                //s'il n'y a pas de mdp
-                else if (email.getText().length() >0 && mdp.getText().length() == 0) {
-                    //alors le message suivant est affiché
-                    String toastMessage = "Le mot de passe n'est pas entré ";
-                    Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
-                }
-
-                //s'il n'y a pas de mdp+identifiant
-                else {
-                    //alors le message suivant est affiché
-                    String toastMessage = "L'identifiant et le mot de passe ne sont pas entrés ";
-                    Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
-                }
-            }
-
         });
     }
-//    @Override
-//    protected void onPreExecute() {
-//        super.onPreExecute();
-//        System.out.println("Pre execution starting");
-//        Toast.makeText(LogIn.this, "Executing..", Toast.LENGTH_SHORT).show();
-//
-//    }
 }
-
-

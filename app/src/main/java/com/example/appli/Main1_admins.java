@@ -44,7 +44,7 @@ public class Main1_admins extends AppCompatActivity {
 
         mail = (EditText)findViewById(R.id.mail);
         password = (EditText)findViewById(R.id.password);
-        final boolean[] succes = new boolean[1];
+        final boolean[] success = new boolean[1];
         final int[] perm = new int[1];
 
         final Button button=(Button)findViewById(R.id.valider1);
@@ -67,26 +67,19 @@ public class Main1_admins extends AppCompatActivity {
                                     try
                                     {
                                         jObject = new JSONObject(response);
-                                        succes[0] = jObject.getBoolean("succes");
+                                        success[0] = jObject.getBoolean("success");
                                         perm[0] = jObject.getInt("perm");
-                                        System.out.println("test : " + succes[0]);
+                                        System.out.println("test : " + success[0]);
                                     }
                                     catch (JSONException e)
                                     {
                                         e.printStackTrace();
                                     }
                                 }
-                                if (succes[0] == true)
+                                if (success[0] == true)
                                 {
-                                    if (perm[0] == 1)
-                                    {
-                                        Intent launchactivity = new Intent(Main1_admins.this, Main6_log.class);
-                                    }
-                                    else
-                                    {
-                                        Toast.makeText(Main1_admins.this, "pas ok", Toast.LENGTH_SHORT).show();
-                                    }
-                                    Toast.makeText(Main1_admins.this, url.toString(), Toast.LENGTH_SHORT).show();
+                                    Intent launchactivity = new Intent(Main1_admins.this, Main6_log.class);
+                                    startActivity(launchactivity);
                                 }
                                 else
                                 {

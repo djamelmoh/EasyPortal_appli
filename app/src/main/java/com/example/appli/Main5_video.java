@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.MediaController;
@@ -30,6 +31,8 @@ public class Main5_video extends AppCompatActivity {
         setContentView(R.layout.activity5_video_admin);
 
         WebView myWebView = (WebView) findViewById(R.id.webview);
+        WebSettings webSettings = myWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
         myWebView.loadUrl("http://91.81.88.254/");
 
 //        final VideoView videoView;

@@ -62,18 +62,19 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="393dp"
-        android:layout_height="499dp"
-        android:orientation="vertical"
+        android:layout_width="504dp"
+        android:layout_height="681dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="107dp">
+        app:layout_constraintTop_toTopOf="parent">
 
         <WebView
             android:id="@+id/webview"
-            android:layout_width="match_parent"
-            android:layout_height="418dp" />
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

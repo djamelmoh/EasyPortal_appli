@@ -47,8 +47,6 @@ public class Main6_log extends AppCompatActivity {
                 Intent user = new Intent(Main6_log.this, Main8_gestion_user.class);
                 startActivity(user);
             }
-
-
         });
 
         Button button_accueil = (Button) findViewById(R.id.retour);
@@ -58,8 +56,6 @@ public class Main6_log extends AppCompatActivity {
                 Intent accueil = new Intent(Main6_log.this, Main7_accueil.class);
                 startActivity(accueil);
             }
-
-
         });
     }
 }

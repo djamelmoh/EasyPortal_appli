@@ -26,26 +26,18 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Main2_users extends AppCompatActivity {
-
+//declaration des variables
     EditText mail;
     EditText password;
-    Button btn;
-    int id;
-    String name;
-    String info;
-    String reponse1;
-    TextView test;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity1_page_user);
-
+//mise en relation des variable avec le nom des boutton du xml
         mail = (EditText)findViewById(R.id.email);
         password = (EditText)findViewById(R.id.mdp);
-        final boolean[] success = new boolean[1];
-        final int[] status = new int[1];
-
+        boolean[] success = new boolean[1];
+        int[] status = new int[1];
         final Button button=(Button)findViewById(R.id.valider1);
         button.setOnClickListener(new View.OnClickListener()
         {
@@ -55,56 +47,61 @@ public class Main2_users extends AppCompatActivity {
                 // Debut GET
                 String email = mail.getText().toString();
                 String mdp = password.getText().toString();
+                //declaration url api
                 String url = "http://51.210.151.13/btssnir/projets2022/easyportal/api/connexion.php?username="+email+"&password="+mdp;
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
-
-                                if(response!=null){
+                                if(response!=null)
+                                {
                                     JSONObject jObject = null;
-                                    try {
+                                    try
+                                    {
                                         jObject = new JSONObject(response);
                                         success[0] = jObject.getBoolean("success");
                                         status[0] = jObject.getInt("status");
                                         System.out.println("test : "+ success[0]);
-                                    } catch (JSONException e) {
+                                    }
+                                    catch (JSONException e)
+                                    {
                                         e.printStackTrace();
                                     }
-
                                 }
-
                                 if(success[0]==true)
                                 {
                                     if(status[0]==2)
                                     {
+                                        //redirection ver le Main_7 pour l'admin
                                         Intent redirection= new Intent(Main2_users.this, Main7_accueil.class);
                                         startActivity(redirection);
                                     }
                                     else if(status[0]==1)
                                     {
+                                        //redirection ver le Main_3 pour l'admin
                                         Intent redirection1= new Intent(Main2_users.this, Main3_boutton.class);
                                         startActivity(redirection1);
                                         Toast.makeText(Main2_users.this, "Accès à l'ouverture du portail.", Toast.LENGTH_SHORT).show();
                                     }
                                 }
-
+                                //Si mdp ou identifiant son mauvais alors affiche messager suivant
                                 else
                                 {
                                     Toast.makeText(Main2_users.this, "L'utilisateur ou le mot de passe n'est pas reconnu dans la base de donnée.", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         },
-                        new Response.ErrorListener() {
+                        new Response.ErrorListener()
+                        {
                             @Override
-                            public void onErrorResponse(VolleyError error) {
+                            public void onErrorResponse(VolleyError error)
+                            {
                                 Toast.makeText(Main2_users.this, error.toString(), Toast.LENGTH_SHORT).show();
                             }
                         });
-
+                //permets d'executer le code dans la page
                 RequestQueue requestQueue = Volley.newRequestQueue(Main2_users.this);
                 requestQueue.add(stringRequest);
-
                 // Fin GET
             }
         });

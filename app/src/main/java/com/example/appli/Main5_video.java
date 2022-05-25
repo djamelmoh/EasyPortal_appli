@@ -29,7 +29,6 @@ public class Main5_video extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity5_video_admin);
-
         WebView myWebView = (WebView) findViewById(R.id.webview);
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -46,7 +45,6 @@ public class Main5_video extends AppCompatActivity {
 
 //--------------------------------------------------------------------------------------------------
         //Barre de menue pour acceder au autre fonctionnalité de l'admin
-
         Button button_user = (Button) findViewById(R.id.users);
         button_user.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,8 +52,6 @@ public class Main5_video extends AppCompatActivity {
                 Intent user = new Intent(Main5_video.this, Main8_gestion_user.class);
                 startActivity(user);
             }
-
-
         });
 
         Button button_log = (Button) findViewById(R.id.log);
@@ -65,8 +61,6 @@ public class Main5_video extends AppCompatActivity {
                 Intent log = new Intent(Main5_video.this, Main6_log.class);
                 startActivity(log);
             }
-
-
         });
 
         Button button_accueil = (Button) findViewById(R.id.retour);
@@ -76,8 +70,6 @@ public class Main5_video extends AppCompatActivity {
                 Intent accueil = new Intent(Main5_video.this, Main7_accueil.class);
                 startActivity(accueil);
             }
-
-
         });
 
         Button button_portail = (Button) findViewById(R.id.portail);

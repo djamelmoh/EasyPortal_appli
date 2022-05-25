@@ -51,7 +51,6 @@ public class Main8_gestion_user extends AppCompatActivity {
                 Intent log = new Intent(Main8_gestion_user.this, Main6_log.class);
                 startActivity(log);
             }
-
         });
 //--------------------------------------------------------------------------------------------------
     }

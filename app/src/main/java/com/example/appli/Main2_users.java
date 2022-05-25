@@ -59,6 +59,7 @@ public class Main2_users extends AppCompatActivity {
                                     try
                                     {
                                         jObject = new JSONObject(response);
+                                        //mise en relation avec l'api
                                         success[0] = jObject.getBoolean("success");
                                         status[0] = jObject.getInt("status");
                                         System.out.println("test : "+ success[0]);
@@ -68,6 +69,7 @@ public class Main2_users extends AppCompatActivity {
                                         e.printStackTrace();
                                     }
                                 }
+                                //si l'utilisateur est reconnue alors:
                                 if(success[0]==true)
                                 {
                                     if(status[0]==2)

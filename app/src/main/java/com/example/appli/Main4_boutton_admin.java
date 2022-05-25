@@ -51,7 +51,7 @@ public class Main4_boutton_admin extends AppCompatActivity {
         Button button_video = (Button) findViewById(R.id.Image);
         button_video.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View btn_video) {
                 Intent video = new Intent(Main4_boutton_admin.this, Main5_video.class);
                 startActivity(video);
             }
@@ -59,7 +59,7 @@ public class Main4_boutton_admin extends AppCompatActivity {
         Button button_user = (Button) findViewById(R.id.users);
         button_user.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View btn_user) {
                 Intent user = new Intent(Main4_boutton_admin.this, Main8_gestion_user.class);
                 startActivity(user);
             }
@@ -67,7 +67,7 @@ public class Main4_boutton_admin extends AppCompatActivity {
         Button button_log = (Button) findViewById(R.id.log);
         button_log.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View btn_log) {
                 Intent log = new Intent(Main4_boutton_admin.this, Main6_log.class);
                 startActivity(log);
             }
@@ -75,7 +75,7 @@ public class Main4_boutton_admin extends AppCompatActivity {
         Button button_accueil = (Button) findViewById(R.id.retour);
         button_accueil.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View btn_accueil) {
                 Intent accueil = new Intent(Main4_boutton_admin.this, Main7_accueil.class);
                 startActivity(accueil);
             }

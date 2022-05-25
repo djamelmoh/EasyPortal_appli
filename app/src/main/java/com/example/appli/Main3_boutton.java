@@ -74,7 +74,7 @@ public class Main3_boutton extends AppCompatActivity {
         Button button_retour = (Button) findViewById(R.id.retour);
         button_retour.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View btn_deconnexion) {
                 Intent deconnexion = new Intent(Main3_boutton.this, Main2_users.class);
                 startActivity(deconnexion);
             }

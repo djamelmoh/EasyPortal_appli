@@ -19,7 +19,7 @@ public class Main8_gestion_user extends AppCompatActivity {
         Button button = (Button) findViewById(R.id.portail);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View btn_portail) {
                 Intent portail = new Intent(Main8_gestion_user.this, Main4_boutton_admin.class);
                 startActivity(portail);
             }
@@ -28,7 +28,7 @@ public class Main8_gestion_user extends AppCompatActivity {
         Button button_video = (Button) findViewById(R.id.Image);
         button_video.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View btn_video) {
                 Intent video = new Intent(Main8_gestion_user.this, Main5_video.class);
                 startActivity(video);
             }
@@ -38,7 +38,7 @@ public class Main8_gestion_user extends AppCompatActivity {
         Button button_accueil = (Button) findViewById(R.id.retour);
         button_accueil.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View btn_accueil) {
                 Intent accueil = new Intent(Main8_gestion_user.this, Main7_accueil.class);
                 startActivity(accueil);
             }
@@ -47,7 +47,7 @@ public class Main8_gestion_user extends AppCompatActivity {
         Button button_log = (Button) findViewById(R.id.log);
         button_log.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View btn_log) {
                 Intent log = new Intent(Main8_gestion_user.this, Main6_log.class);
                 startActivity(log);
             }

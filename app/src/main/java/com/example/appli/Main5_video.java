@@ -48,7 +48,7 @@ public class Main5_video extends AppCompatActivity {
         Button button_user = (Button) findViewById(R.id.users);
         button_user.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View btn_user) {
                 Intent user = new Intent(Main5_video.this, Main8_gestion_user.class);
                 startActivity(user);
             }
@@ -57,7 +57,7 @@ public class Main5_video extends AppCompatActivity {
         Button button_log = (Button) findViewById(R.id.log);
         button_log.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View btn_log) {
                 Intent log = new Intent(Main5_video.this, Main6_log.class);
                 startActivity(log);
             }
@@ -66,7 +66,7 @@ public class Main5_video extends AppCompatActivity {
         Button button_accueil = (Button) findViewById(R.id.retour);
         button_accueil.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View btn_accueil) {
                 Intent accueil = new Intent(Main5_video.this, Main7_accueil.class);
                 startActivity(accueil);
             }
@@ -75,7 +75,7 @@ public class Main5_video extends AppCompatActivity {
         Button button_portail = (Button) findViewById(R.id.portail);
         button_portail.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View btn_portail) {
                 Intent portail = new Intent(Main5_video.this, Main4_boutton_admin.class);
                 startActivity(portail);
             }

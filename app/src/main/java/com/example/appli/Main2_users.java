@@ -26,7 +26,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Main2_users extends AppCompatActivity {
-//declaration des variables
+    //declaration des variables
     EditText mail;
     EditText password;
     @Override
@@ -83,7 +83,7 @@ public class Main2_users extends AppCompatActivity {
                                         //redirection ver le Main_3 pour l'admin
                                         Intent redirection1= new Intent(Main2_users.this, Main3_boutton.class);
                                         startActivity(redirection1);
-                                        Toast.makeText(Main2_users.this, "Accès à l'ouverture du portail.", Toast.LENGTH_SHORT).show();
+
                                     }
                                 }
                                 //Si mdp ou identifiant son mauvais alors affiche messager suivant

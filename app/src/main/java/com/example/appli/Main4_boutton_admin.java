@@ -23,6 +23,8 @@ public class Main4_boutton_admin extends AppCompatActivity {
         //myLayout =(FrameLayout) findViewById(R.id.FrameLayout) ;
         on = (ToggleButton) findViewById(R.id.on);
         image = (ImageView) findViewById(R.id.image);
+
+        Toast.makeText(Main4_boutton_admin.this, "Accès à l'ouverture du portail.", Toast.LENGTH_SHORT).show();
         //declartration pour le swith case
         on.setOnClickListener((v) -> {
             if (etat == false) {

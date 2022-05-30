@@ -9,8 +9,8 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
-        android:layout_width="373dp"
-        android:layout_height="421dp"
+        android:layout_width="474dp"
+        android:layout_height="553dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,43 +21,24 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="590dp"
+                android:layout_height="305dp"
+                android:layout_gravity="center"
+                android:rotation="0"
+                app:srcCompat="@drawable/led_off" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <FrameLayout
-                        android:id="@+id/FrameLayout"
-                        android:layout_width="386dp"
-                        android:layout_height="265dp">
-
-                        <ImageView
-                            android:id="@+id/image"
-                            android:layout_width="432dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:rotation="0"
-                            app:srcCompat="@drawable/led_off" />
-
-                    </FrameLayout>
-
-                    <ToggleButton
-                        android:id="@+id/on"
-                        android:layout_width="358dp"
-                        android:layout_height="120dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/toggle_on"
-                        android:gravity="center"
-                        android:text="ToggleButton"
-                        android:textOff=" "
-                        android:textOn=" " />
-
-                </LinearLayout>
-            </RelativeLayout>
+            <ToggleButton
+                android:id="@+id/on"
+                android:layout_width="474dp"
+                android:layout_height="226dp"
+                android:layout_gravity="center"
+                android:background="@drawable/toggle_on"
+                android:gravity="center"
+                android:text="ToggleButton"
+                android:textOff=" "
+                android:textOn=" " />
 
         </LinearLayout>
     </RelativeLayout>

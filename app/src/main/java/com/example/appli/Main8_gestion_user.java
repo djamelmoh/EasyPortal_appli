@@ -3,6 +3,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,6 +22,7 @@ public class Main8_gestion_user extends AppCompatActivity {
             @Override
             public void onClick(View btn_portail) {
                 Intent portail = new Intent(Main8_gestion_user.this, Main4_boutton_admin.class);
+                Toast.makeText(Main8_gestion_user.this, "Ouverture du portail.", Toast.LENGTH_SHORT).show();
                 startActivity(portail);
             }
         });

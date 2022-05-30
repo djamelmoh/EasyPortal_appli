@@ -8,22 +8,26 @@
     tools:context=".Main6_log">
 
     <LinearLayout
-        android:layout_width="438dp"
-        android:layout_height="588dp"
+        android:layout_width="409dp"
+        android:layout_height="632dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="-15dp"
-        tools:layout_editor_absoluteY="80dp">
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="586dp">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/log_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="25px" />
         </ScrollView>
 
         <!--        <EditText-->
@@ -90,4 +94,16 @@
             android:textSize="9sp" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voici la page de log"
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="2dp"
+        android:textSize="43px"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

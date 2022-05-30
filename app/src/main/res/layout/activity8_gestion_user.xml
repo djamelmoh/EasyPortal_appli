@@ -61,18 +61,23 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="408dp"
-        android:layout_height="335dp"
+        android:id="@+id/linearLayout4"
+        android:layout_width="409dp"
+        android:layout_height="348dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="68dp">
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/ajouter_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ajouter un utilisateur"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="25px"/>
 
         <TextView
             android:id="@+id/text"
@@ -142,7 +147,7 @@
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="Enregistrer" />
 
         <TextView
@@ -154,19 +159,24 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="420dp"
-        android:layout_height="194dp"
+        android:id="@+id/linearLayout5"
+        android:layout_width="409dp"
+        android:layout_height="245dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="476dp">
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
         <TextView
             android:id="@+id/restreinte_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#FF0000"
             android:text="Supprimer un utilisateur"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="25px"/>
 
         <TextView
             android:id="@+id/textView7"
@@ -187,9 +197,23 @@
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="59dp"
+            android:layout_width="399dp"
+            android:layout_height="65dp"
             android:text="Supprimer" />
+
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Page de gestion d'utilisateur"
+        android:textColor="@color/red"
+        android:textSize="45px"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

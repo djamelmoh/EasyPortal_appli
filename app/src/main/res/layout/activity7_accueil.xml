@@ -8,16 +8,15 @@
     tools:context=".Main7_accueil">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="446dp"
         android:layout_height="345dp"
-        android:layout_marginTop="265dp"
         android:orientation="vertical"
         android:padding="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout2">
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/portail"
@@ -61,20 +60,18 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="283dp"
-        android:layout_height="106dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="121dp">
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="272dp"
-            android:layout_height="94dp"
-            android:text="Bienvenue, sélectionné votre menue!!"
-            android:textColor="@color/white" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="402dp"
+        android:layout_height="227dp"
+        android:text="Bienvenue, sélectionné votre menu!!"
+        android:textColor="@color/red"
+        android:textSize="43px"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.513" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

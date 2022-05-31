@@ -25,16 +25,19 @@ public class Main8_gestion_user extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity8_gestion_user);
+        //declaration des variables
         EditText username;
         EditText role;
         EditText nom;
         EditText prenom;
+
+        //mise en relation des variables avec le xml
         username = (EditText)findViewById(R.id.username);
         role = (EditText)findViewById(R.id.role);
         nom = (EditText)findViewById(R.id.nom);
         prenom = (EditText)findViewById(R.id.prenom);
         boolean[] success = new boolean[1];
-        //int[] status = new int[1];
+        //Mise en relation bouton enregistrer
         final Button btn_enregistrer=(Button)findViewById(R.id.enregistrer);
         btn_enregistrer.setOnClickListener(new View.OnClickListener()
         {
@@ -42,6 +45,7 @@ public class Main8_gestion_user extends AppCompatActivity {
             public void onClick(View v)
             {
                 // Debut GET
+                //copnvertir le texte en string
                 String username1 = username.getText().toString();
                 String role1 = role.getText().toString();
                 String nom1 = nom.getText().toString();
@@ -65,12 +69,14 @@ public class Main8_gestion_user extends AppCompatActivity {
 
                                         if(success[0]==true)
                                         {
+                                            //recupere le message de l'api
                                             String msg = jObject.getString("message");
                                             Toast.makeText(Main8_gestion_user.this,msg, Toast.LENGTH_SHORT).show();
                                         }
                                         //Sinon
                                         else
                                         {
+                                            //recupere le message de l'api
                                             String msg = jObject.getString("message");
                                             Toast.makeText(Main8_gestion_user.this, msg, Toast.LENGTH_SHORT).show();
                                         }

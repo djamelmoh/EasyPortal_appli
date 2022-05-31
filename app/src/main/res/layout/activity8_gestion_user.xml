@@ -62,8 +62,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="409dp"
-        android:layout_height="348dp"
+        android:layout_width="405dp"
+        android:layout_height="359dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:text="Ajouter un utilisateur"
             android:textColor="@color/white"
-            android:textSize="25px"/>
+            android:textSize="25px" />
 
         <TextView
             android:id="@+id/text"

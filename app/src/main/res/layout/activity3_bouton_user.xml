@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/ouvrir"
             android:layout_width="474dp"
             android:layout_height="470dp"
             android:background="@drawable/led_off" />

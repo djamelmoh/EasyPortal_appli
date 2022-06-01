@@ -4,11 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 import android.os.Bundle;
-import android.widget.FrameLayout;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Main3_boutton extends AppCompatActivity {
 //    private ImageView image;
@@ -20,56 +27,67 @@ public class Main3_boutton extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity3_bouton_user);
-//
-//        //  on = (ToggleButton) findViewById(R.id.on);
-//        //myLayout =(FrameLayout) findViewById(R.id.FrameLayout) ;
-//        on = (ToggleButton) findViewById(R.id.on);
-//        image = (ImageView) findViewById(R.id.image);
-//
-//        //declartration pour le swith case
-//        on.setOnClickListener((v) -> {
-//            if (etat == false) {
-//
-//                image.setImageResource(R.drawable.led_on);
-//                on.setBackgroundResource(R.drawable.toggle_off);
-//                //si faux (si on clique pas dessus, l'image du xml reste la même)
-//                etat = true;
-//
-//                for (int j = 8; j > 0; j--)
-//                {
-//                    String toastMessage = "Le portail s'ouvre. Temps d'attente " + j + " secondes ";
-//                    Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//
-//
-////                try {
-////                    for (int i = 0; i < 8; i++) {
-////                        Thread.sleep(1000);
-////                        System.out.println("Sleep "+i);
-////                    }
-////                }   catch(Exception e) {
-////                    System.out.println(e);
-////                }
-////
-////            }
-//
-//
-//            //si vrai (si on clique pas dessus, l'image change)
-//            else if (etat == true) {
-//
-//                image.setImageResource(R.drawable.led_off);
-//                on.setBackgroundResource(R.drawable.toggle_on);
-//                etat = false;
-//
-//                for (int j = 8; j > 0; j--) {
-//                    String toastMessage = "Le portail se ferme. Temps d'attente " + j + " secondes ";
-//                    Toast.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//
-//        });
-//
+        boolean[] success = new boolean[1];
+        final Button btn_ouvrir=(Button)findViewById(R.id.ouvrir);
+        String username = getIntent().getExtras().get("username").toString();
+        btn_ouvrir.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                // Debut GET
+                //copnvertir le texte en string
+                //declaration url api
+                String url = "http://51.210.151.13/btssnir/projets2022/easyportal/api/open.php?username="+username;
+                StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                if(response!=null)
+                                {
+                                    JSONObject jObject = null;
+                                    try
+                                    {
+                                        jObject = new JSONObject(response);
+                                        //mise en relation avec l'api
+                                        success[0] = jObject.getBoolean("success");
+                                        //status[0] = jObject.getInt("status");
+                                        System.out.println("test : "+ success[0]);
+                                        if(success[0]==true)
+                                        {
+                                            //recupere le message de l'api
+                                            String msg = jObject.getString("message");
+                                            Toast.makeText(Main3_boutton.this,msg, Toast.LENGTH_SHORT).show();
+                                        }
+                                        //Sinon
+                                        else
+                                        {
+                                            //recupere le message de l'api
+                                            String msg = jObject.getString("message");
+                                            Toast.makeText(Main3_boutton.this, msg, Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                    catch (JSONException e)
+                                    {
+                                        e.printStackTrace();
+                                    }
+                                }
+                            }
+                        },
+                        new Response.ErrorListener()
+                        {
+                            @Override
+                            public void onErrorResponse(VolleyError error)
+                            {
+                                Toast.makeText(Main3_boutton.this, error.toString(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                //permets d'executer le code dans la page
+                RequestQueue requestQueue = Volley.newRequestQueue(Main3_boutton.this);
+                requestQueue.add(stringRequest);
+                // Fin GET
+            }
+        });
         //variable boutton deconnexion
         Button button_retour = (Button) findViewById(R.id.retour);
         button_retour.setOnClickListener(new View.OnClickListener() {
@@ -85,3 +103,4 @@ public class Main3_boutton extends AppCompatActivity {
     }
 
 }
+

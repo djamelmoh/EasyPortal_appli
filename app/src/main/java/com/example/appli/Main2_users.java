@@ -45,10 +45,10 @@ public class Main2_users extends AppCompatActivity {
             public void onClick(View v)
             {
                 // Debut GET
-                String email = mail.getText().toString();
+                String username = mail.getText().toString();
                 String mdp = password.getText().toString();
                 //declaration url api
-                String url = "http://51.210.151.13/btssnir/projets2022/easyportal/api/connexion.php?username="+email+"&password="+mdp;
+                String url = "http://51.210.151.13/btssnir/projets2022/easyportal/api/connexion.php?username="+username+"&password="+mdp;
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                         new Response.Listener<String>() {
                             @Override
@@ -80,9 +80,10 @@ public class Main2_users extends AppCompatActivity {
                                     }
                                     else if(status[0]==1)
                                     {
-                                        //redirection ver le Main_3 pour l'admin
+                                        //redirection ver le Main_3 pour l'utilisateur
                                         Intent redirection1= new Intent(Main2_users.this, Main3_boutton.class);
                                         Toast.makeText(Main2_users.this, "Ouverture du portail.", Toast.LENGTH_SHORT).show();
+                                        redirection1.putExtra("username",username);
                                         startActivity(redirection1);
 
                                     }

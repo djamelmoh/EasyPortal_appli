@@ -40,7 +40,7 @@
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.DialogWhenLarge"/>
         <activity
-            android:name=".Main1_admins"
+            android:name=".Main1_page_user"
             android:exported="false" />
         <activity
             android:name=".Main2_users"

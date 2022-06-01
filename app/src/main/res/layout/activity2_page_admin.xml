@@ -4,57 +4,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main1_admins">
+    android:background="@drawable/fond_page"
+    tools:context=".Main1_page_user">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="#D8D8D8"
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="306dp"
+        android:layout_height="282dp"
+        android:layout_marginBottom="347dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
-        <LinearLayout
+        <Button
+            android:id="@+id/ouvrir"
             android:layout_width="match_parent"
-            android:layout_height="279dp"
-            android:orientation="vertical"
-            android:padding="24dp">
+            android:layout_height="295dp"
+            android:background="@drawable/led_off" />
+    </LinearLayout>
 
-            <EditText
-                android:id="@+id/mail"
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="122dp"
+        android:layout_height="67dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/retour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/retour"
+            android:textColor="@color/red" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="415dp"
+        android:layout_height="320dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajouter plaque d'immatriculation"
+            android:textColor="@color/white"
+            android:textSize="25px" />
+
+        <EditText
+            android:id="@+id/plaque"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/ajouter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajouter" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
-                android:minHeight="48dp" />
-
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:minHeight="48dp" />
-
-            <Button
-                android:id="@+id/valider1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:orientation="vertical"
-                android:textColor="@color/white"
-                android:text="Voir JSON"
-                android:textSize="22sp" />
-
-            <Button
-                android:id="@+id/user"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Se connecter en utilisateur" />
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="25px"/>
+        </ScrollView>
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

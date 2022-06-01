@@ -81,8 +81,7 @@ public class Main2_users extends AppCompatActivity {
                                     else if(status[0]==1)
                                     {
                                         //redirection ver le Main_3 pour l'utilisateur
-                                        Intent redirection1= new Intent(Main2_users.this, Main3_boutton.class);
-                                        Toast.makeText(Main2_users.this, "Ouverture du portail.", Toast.LENGTH_SHORT).show();
+                                        Intent redirection1= new Intent(Main2_users.this, Main1_page_user.class);
                                         redirection1.putExtra("username",username);
                                         startActivity(redirection1);
 

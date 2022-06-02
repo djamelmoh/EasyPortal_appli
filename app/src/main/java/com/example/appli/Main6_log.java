@@ -29,12 +29,9 @@ public class Main6_log extends AppCompatActivity {
         setContentView(R.layout.activity6_log);
         TextView logText = (TextView)findViewById(R.id.log_info);
         boolean[] success = new boolean[1];
-        int[] status = new int[1];
-        String usurname= new String();
+
 
         String url = "http://51.210.151.13/btssnir/projets2022/easyportal/api/logs.php";
-        //Toast.makeText(Main6_log.this, url, Toast.LENGTH_SHORT).show();
-
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
@@ -53,15 +50,10 @@ public class Main6_log extends AppCompatActivity {
                                     temp += log.getString("date") + " : " + log.getString("user") + " a ouvert le portail avec le site \n";
                                 }
                                 logText.setText(temp);
-//                                Toast.makeText(Main6_log.this, log.getString("methode"), Toast.LENGTH_SHORT).show();
                             } catch (JSONException e) {
                                 e.printStackTrace();
                                 Toast.makeText(Main6_log.this, "erreur", Toast.LENGTH_SHORT).show();
                             }
-                        }
-                        //Si mdp ou identifiant son mauvais alors affiche messager suivant
-                        else {
-                            Toast.makeText(Main6_log.this, "L'utilisateur ou le mot de passe n'est pas reconnu dans la base de donnée.", Toast.LENGTH_SHORT).show();
                         }
                     }
                 },
@@ -73,8 +65,8 @@ public class Main6_log extends AppCompatActivity {
                         Toast.makeText(Main6_log.this, error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
-                RequestQueue requestQueue = Volley.newRequestQueue(Main6_log.this);
-                requestQueue.add(stringRequest);
+              RequestQueue requestQueue = Volley.newRequestQueue(Main6_log.this);
+              requestQueue.add(stringRequest);
 
 
 //--------------------------------------------------------------------------------------------------

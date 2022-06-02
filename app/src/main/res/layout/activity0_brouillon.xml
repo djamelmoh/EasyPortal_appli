@@ -5,15 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fond_page"
-    tools:context=".Main1_page_user">
+    tools:context=".Main1_broullion">
 
     <LinearLayout
         android:id="@+id/linearLayout7"
-        android:layout_width="306dp"
-        android:layout_height="282dp"
-        android:layout_marginBottom="347dp"
+        android:layout_width="249dp"
+        android:layout_height="217dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,21 +20,21 @@
 
         <Button
             android:id="@+id/ouvrir"
-            android:layout_width="match_parent"
-            android:layout_height="295dp"
+            android:layout_width="246dp"
+            android:layout_height="198dp"
             android:background="@drawable/led_off" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="122dp"
-        android:layout_height="67dp"
+        android:layout_width="137dp"
+        android:layout_height="50dp"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/retour"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@android:color/transparent"
             android:text="@string/retour"
             android:textColor="@color/red" />
@@ -43,6 +42,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout6"
         android:layout_width="415dp"
         android:layout_height="320dp"
         android:orientation="vertical"
@@ -80,12 +80,12 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="25px"/>
+                android:textSize="25px" />
         </ScrollView>
     </LinearLayout>
 

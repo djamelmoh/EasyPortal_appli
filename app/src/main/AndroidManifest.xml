@@ -36,11 +36,11 @@
             android:exported="false"/>
 
         <activity
-            android:name=".Main3_boutton"
+            android:name=".Main3_page_users"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.DialogWhenLarge"/>
         <activity
-            android:name=".Main1_page_user"
+            android:name=".Main1_broullion"
             android:exported="false" />
         <activity
             android:name=".Main2_users"

@@ -5,38 +5,89 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fond_page"
-    tools:context=".Main3_boutton">
+    tools:context=".Main3_page_users">
 
     <LinearLayout
-        android:layout_width="444dp"
-        android:layout_height="478dp"
+        android:id="@+id/linearLayout7"
+        android:layout_width="249dp"
+        android:layout_height="217dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <Button
             android:id="@+id/ouvrir"
-            android:layout_width="474dp"
-            android:layout_height="470dp"
+            android:layout_width="246dp"
+            android:layout_height="198dp"
             android:background="@drawable/led_off" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="122dp"
-        android:layout_height="67dp"
+        android:id="@+id/linearLayout3"
+        android:layout_width="137dp"
+        android:layout_height="50dp"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/retour"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@android:color/transparent"
             android:text="@string/retour"
             android:textColor="@color/red" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="415dp"
+        android:layout_height="320dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajouter plaque d'immatriculation"
+            android:textColor="@color/white"
+            android:textSize="25px" />
+
+        <EditText
+            android:id="@+id/plaque"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/ajouter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ajouter" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="25px" />
+        </ScrollView>
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

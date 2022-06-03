@@ -90,6 +90,14 @@ public class Main3_page_supprimer_user extends AppCompatActivity {
                 // Fin GET
             }
         });
+        Button button_spr = (Button) findViewById(R.id.supprimer_plaque_1);
+        button_spr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View button_spr) {
+                Intent suppr = new Intent(Main3_page_supprimer_user.this, Main2_page_users.class);
+                startActivity(suppr);
+            }
 
+        });
     }
  }

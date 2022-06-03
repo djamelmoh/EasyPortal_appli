@@ -73,7 +73,9 @@
             android:id="@+id/ajouter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ajouter" />
+            android:text="Ajouter"
+            android:textColor="@color/purple_200"
+            android:background="@android:color/transparent"/>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -92,7 +94,9 @@
             android:id="@+id/supprimer_plaque"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SUPPRIMER MES PLAQUES" />
+            android:text="SUPPRIMER MES PLAQUES"
+            android:textColor="@color/purple_200"
+            android:background="@android:color/transparent"/>
 
     </LinearLayout>
 

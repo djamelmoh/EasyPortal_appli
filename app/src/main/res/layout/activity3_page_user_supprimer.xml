@@ -48,7 +48,10 @@
             android:id="@+id/supprimer_plaque_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SUPPRIMER" />
+            android:text="SUPPRIMER"
+            android:textColor="@color/purple_200"
+            android:background="@android:color/transparent"
+            />
     </LinearLayout>
 
     <LinearLayout

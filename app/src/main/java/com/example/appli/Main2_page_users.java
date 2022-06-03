@@ -22,12 +22,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Main3_page_users extends AppCompatActivity {
+public class Main2_page_users extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity0_brouillon);
+        setContentView(R.layout.activity2_page_user);
         //Page d'accueil pour acceder au autre fonctionnalité de l'admin
 
         boolean[] success = new boolean[1];
@@ -55,13 +55,13 @@ public class Main3_page_users extends AppCompatActivity {
                                         if (success[0] == true) {
                                             //recupere le message de l'api
                                             String msg = jObject.getString("message");
-                                            Toast.makeText(Main3_page_users.this, msg, Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(Main2_page_users.this, msg, Toast.LENGTH_SHORT).show();
                                         }
                                         //Sinon
                                         else {
                                             //recupere le message de l'api
                                             String msg = jObject.getString("message");
-                                            Toast.makeText(Main3_page_users.this, msg, Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(Main2_page_users.this, msg, Toast.LENGTH_SHORT).show();
                                         }
                                     } catch (JSONException e) {
                                         e.printStackTrace();
@@ -72,11 +72,11 @@ public class Main3_page_users extends AppCompatActivity {
                         new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(Main3_page_users.this, error.toString(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Main2_page_users.this, error.toString(), Toast.LENGTH_SHORT).show();
                             }
                         });
                 //permets d'executer le code dans la page
-                RequestQueue requestQueue = Volley.newRequestQueue(Main3_page_users.this);
+                RequestQueue requestQueue = Volley.newRequestQueue(Main2_page_users.this);
                 requestQueue.add(stringRequest);
                 // Fin GET
             }
@@ -86,7 +86,7 @@ public class Main3_page_users extends AppCompatActivity {
         button_retour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View btn_deconnexion) {
-                Intent deconnexion = new Intent(Main3_page_users.this, Main2_users.class);
+                Intent deconnexion = new Intent(Main2_page_users.this, Main1_connexion.class);
                 startActivity(deconnexion);
             }
 
@@ -124,13 +124,13 @@ public class Main3_page_users extends AppCompatActivity {
                                         if (success[0] == true) {
                                             //recupere le message de l'api
                                             String msg = jObject.getString("message");
-                                            Toast.makeText(Main3_page_users.this, msg, Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(Main2_page_users.this, msg, Toast.LENGTH_SHORT).show();
                                         }
                                         //Sinon
                                         else {
                                             //recupere le message de l'api
                                             String msg = jObject.getString("message");
-                                            Toast.makeText(Main3_page_users.this, msg, Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(Main2_page_users.this, msg, Toast.LENGTH_SHORT).show();
                                         }
                                     } catch (JSONException e) {
                                         e.printStackTrace();
@@ -141,11 +141,11 @@ public class Main3_page_users extends AppCompatActivity {
                         new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(Main3_page_users.this, error.toString(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Main2_page_users.this, error.toString(), Toast.LENGTH_SHORT).show();
                             }
                         });
                 //permets d'executer le code dans la page
-                RequestQueue requestQueue = Volley.newRequestQueue(Main3_page_users.this);
+                RequestQueue requestQueue = Volley.newRequestQueue(Main2_page_users.this);
                 requestQueue.add(stringRequest);
                 // Fin GET
             }
@@ -154,7 +154,7 @@ public class Main3_page_users extends AppCompatActivity {
 //-------------------------------------------------------------------------------------------------------------------
         TextView logText = (TextView) findViewById(R.id.info);
         String url = "http://51.210.151.13/btssnir/projets2022/easyportal/api/plaques.php?owner="+username;
-        Toast.makeText(Main3_page_users.this, url, Toast.LENGTH_SHORT).show();
+        Toast.makeText(Main2_page_users.this, url, Toast.LENGTH_SHORT).show();
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
@@ -168,7 +168,7 @@ public class Main3_page_users extends AppCompatActivity {
                                 JSONArray rslt = new JSONArray(jObject.getString("result"));
                                 String temp= "MES PLAQUES :\n ";
                                 String nbr ="";
-                                Toast.makeText(Main3_page_users.this, nbr.valueOf(rslt.length()), Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(Main3_page_users.this, nbr.valueOf(rslt.length()), Toast.LENGTH_SHORT).show();
                                 for(int i=0;i<=rslt.length()-1;i++){
                                     JSONArray plaque = new JSONArray(rslt.getString(i));
                                     temp += plaque.getString(0)+"\n";
@@ -176,7 +176,7 @@ public class Main3_page_users extends AppCompatActivity {
                                 logText.setText(temp);
                             } catch (JSONException e) {
                                 e.printStackTrace();
-                                Toast.makeText(Main3_page_users.this, "message", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Main2_page_users.this, "message", Toast.LENGTH_SHORT).show();
                             }
                         }
                     }
@@ -186,10 +186,10 @@ public class Main3_page_users extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error)
                     {
-                        Toast.makeText(Main3_page_users.this, error.toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Main2_page_users.this, error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
-        RequestQueue requestQueue = Volley.newRequestQueue(Main3_page_users.this);
+        RequestQueue requestQueue = Volley.newRequestQueue(Main2_page_users.this);
         requestQueue.add(stringRequest);
 
     }

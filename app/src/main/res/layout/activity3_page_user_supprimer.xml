@@ -5,23 +5,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fond_page"
-    tools:context=".Main1_broullion">
+    tools:context=".Main3_page_supprimer_user">
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="270dp"
+        android:layout_height="236dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout6"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Supprimmer une plaque d'immatriculation"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Entrer le numéro de la plaque que vous voulez supprimer"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textColor="@color/white" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout7"
-        android:layout_width="249dp"
-        android:layout_height="217dp"
+        android:layout_width="219dp"
+        android:layout_height="165dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintStart_toEndOf="@+id/linearLayout6"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/ouvrir"
-            android:layout_width="246dp"
-            android:layout_height="198dp"
+            android:layout_width="match_parent"
+            android:layout_height="152dp"
             android:background="@drawable/led_off" />
     </LinearLayout>
 
@@ -29,7 +64,12 @@
         android:id="@+id/linearLayout3"
         android:layout_width="137dp"
         android:layout_height="50dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/retour"
@@ -43,14 +83,14 @@
 
     <LinearLayout
         android:id="@+id/linearLayout6"
-        android:layout_width="415dp"
-        android:layout_height="320dp"
+        android:layout_width="301dp"
+        android:layout_height="286dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout8"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <TextView
             android:id="@+id/textView16"
@@ -77,7 +117,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="133dp">
 
             <TextView
                 android:id="@+id/info"

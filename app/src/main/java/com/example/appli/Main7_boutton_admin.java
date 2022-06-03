@@ -17,7 +17,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Main4_boutton_admin extends AppCompatActivity {
+public class Main7_boutton_admin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,14 +54,14 @@ public class Main4_boutton_admin extends AppCompatActivity {
                                         {
                                             //recupere le message de l'api
                                             String msg = jObject.getString("message");
-                                            Toast.makeText(Main4_boutton_admin.this,msg, Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(Main7_boutton_admin.this,msg, Toast.LENGTH_SHORT).show();
                                         }
                                         //Sinon
                                         else
                                         {
                                             //recupere le message de l'api
                                             String msg = jObject.getString("message");
-                                            Toast.makeText(Main4_boutton_admin.this, msg, Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(Main7_boutton_admin.this, msg, Toast.LENGTH_SHORT).show();
                                         }
                                     }
                                     catch (JSONException e)
@@ -76,11 +76,11 @@ public class Main4_boutton_admin extends AppCompatActivity {
                             @Override
                             public void onErrorResponse(VolleyError error)
                             {
-                                Toast.makeText(Main4_boutton_admin.this, error.toString(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Main7_boutton_admin.this, error.toString(), Toast.LENGTH_SHORT).show();
                             }
                         });
                 //permets d'executer le code dans la page
-                RequestQueue requestQueue = Volley.newRequestQueue(Main4_boutton_admin.this);
+                RequestQueue requestQueue = Volley.newRequestQueue(Main7_boutton_admin.this);
                 requestQueue.add(stringRequest);
                 // Fin GET
             }
@@ -90,7 +90,7 @@ public class Main4_boutton_admin extends AppCompatActivity {
         button_retour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View btn_deconnexion) {
-                Intent deconnexion = new Intent(Main4_boutton_admin.this, Main2_users.class);
+                Intent deconnexion = new Intent(Main7_boutton_admin.this, Main1_connexion.class);
                 startActivity(deconnexion);
             }
 
@@ -102,7 +102,7 @@ public class Main4_boutton_admin extends AppCompatActivity {
         button_video.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View btn_video) {
-                Intent video = new Intent(Main4_boutton_admin.this, Main5_video.class);
+                Intent video = new Intent(Main7_boutton_admin.this, Main5_video.class);
                 startActivity(video);
             }
         });
@@ -110,7 +110,7 @@ public class Main4_boutton_admin extends AppCompatActivity {
         button_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View btn_user) {
-                Intent user = new Intent(Main4_boutton_admin.this, Main8_gestion_user.class);
+                Intent user = new Intent(Main7_boutton_admin.this, Main8_gestion_user.class);
                 startActivity(user);
             }
         });
@@ -118,7 +118,7 @@ public class Main4_boutton_admin extends AppCompatActivity {
         button_log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View btn_log) {
-                Intent log = new Intent(Main4_boutton_admin.this, Main6_log.class);
+                Intent log = new Intent(Main7_boutton_admin.this, Main6_log.class);
                 startActivity(log);
             }
         });
@@ -126,7 +126,7 @@ public class Main4_boutton_admin extends AppCompatActivity {
         button_accueil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View btn_accueil) {
-                Intent accueil = new Intent(Main4_boutton_admin.this, Main7_accueil.class);
+                Intent accueil = new Intent(Main7_boutton_admin.this, Main4_accueil.class);
                 startActivity(accueil);
             }
 

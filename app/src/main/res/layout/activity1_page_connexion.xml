@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fond_page"
-    tools:context=".Main2_users">
+    tools:context=".Main1_connexion">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"

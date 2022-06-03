@@ -1,26 +1,14 @@
 package com.example.appli;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
-import android.widget.MediaController;
 import android.widget.Toast;
-import android.widget.VideoView;
+
 import androidx.appcompat.app.AppCompatActivity;
-import android.app.Activity;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.VideoView;
 
 
 public class Main5_video extends AppCompatActivity {
@@ -68,7 +56,7 @@ public class Main5_video extends AppCompatActivity {
         button_accueil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View btn_accueil) {
-                Intent accueil = new Intent(Main5_video.this, Main7_accueil.class);
+                Intent accueil = new Intent(Main5_video.this, Main4_accueil.class);
                 startActivity(accueil);
             }
         });
@@ -77,7 +65,7 @@ public class Main5_video extends AppCompatActivity {
         button_portail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View btn_portail) {
-                Intent portail = new Intent(Main5_video.this, Main4_boutton_admin.class);
+                Intent portail = new Intent(Main5_video.this, Main7_boutton_admin.class);
                 Toast.makeText(Main5_video.this, "Ouverture du portail.", Toast.LENGTH_SHORT).show();
                 startActivity(portail);
             }

@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -78,7 +77,7 @@ public class Main6_log extends AppCompatActivity {
             @Override
             public void onClick(View btn_portail)
             {
-                Intent portail = new Intent(Main6_log.this, Main4_boutton_admin.class);
+                Intent portail = new Intent(Main6_log.this, Main7_boutton_admin.class);
                 Toast.makeText(Main6_log.this, "Ouverture du portail.", Toast.LENGTH_SHORT).show();
                 startActivity(portail);
             }
@@ -113,7 +112,7 @@ public class Main6_log extends AppCompatActivity {
             @Override
             public void onClick(View btn_accueil)
             {
-                Intent accueil = new Intent(Main6_log.this, Main7_accueil.class);
+                Intent accueil = new Intent(Main6_log.this, Main4_accueil.class);
                 startActivity(accueil);
             }
         });

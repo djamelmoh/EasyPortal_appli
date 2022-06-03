@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class Main7_accueil extends AppCompatActivity {
+public class Main4_accueil extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +22,8 @@ public class Main7_accueil extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View btn_portail) {
-                Intent portail = new Intent(Main7_accueil.this, Main4_boutton_admin.class);
-                Toast.makeText(Main7_accueil.this, "Ouverture du portail.", Toast.LENGTH_SHORT).show();
+                Intent portail = new Intent(Main4_accueil.this, Main7_boutton_admin.class);
+                Toast.makeText(Main4_accueil.this, "Ouverture du portail.", Toast.LENGTH_SHORT).show();
                 startActivity(portail);
             }
         });
@@ -32,7 +32,7 @@ public class Main7_accueil extends AppCompatActivity {
         button_video.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View btn_video) {
-                Intent video = new Intent(Main7_accueil.this, Main5_video.class);
+                Intent video = new Intent(Main4_accueil.this, Main5_video.class);
                 startActivity(video);
             }
         });
@@ -42,7 +42,7 @@ public class Main7_accueil extends AppCompatActivity {
         button_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View btn_user) {
-                Intent user = new Intent(Main7_accueil.this, Main8_gestion_user.class);
+                Intent user = new Intent(Main4_accueil.this, Main8_gestion_user.class);
                 startActivity(user);
             }
 
@@ -53,7 +53,7 @@ public class Main7_accueil extends AppCompatActivity {
         button_log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View btn_log) {
-                Intent log = new Intent(Main7_accueil.this, Main6_log.class);
+                Intent log = new Intent(Main4_accueil.this, Main6_log.class);
                 startActivity(log);
             }
 
@@ -65,7 +65,7 @@ public class Main7_accueil extends AppCompatActivity {
         button_deconnexion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View btn_deconnexion) {
-                Intent deconnexion = new Intent(Main7_accueil.this, Main2_users.class);
+                Intent deconnexion = new Intent(Main4_accueil.this, Main1_connexion.class);
                 startActivity(deconnexion);
             }
         });

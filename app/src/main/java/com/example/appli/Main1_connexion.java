@@ -1,19 +1,13 @@
 package com.example.appli;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.app.Activity;
-import java.io.Serializable;
-import java.lang.reflect.Type;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Build;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.content.SharedPreferences;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -25,14 +19,14 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Main2_users extends AppCompatActivity {
+public class Main1_connexion extends AppCompatActivity {
     //declaration des variables
     EditText mail;
     EditText password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity1_page_user);
+        setContentView(R.layout.activity1_page_connexion);
 //mise en relation des variable avec le nom des boutton du xml
         mail = (EditText)findViewById(R.id.email);
         password = (EditText)findViewById(R.id.mdp);
@@ -75,13 +69,13 @@ public class Main2_users extends AppCompatActivity {
                                     if(status[0]==2)
                                     {
                                         //redirection ver le Main_7 pour l'admin
-                                        Intent redirection= new Intent(Main2_users.this, Main7_accueil.class);
+                                        Intent redirection= new Intent(Main1_connexion.this, Main4_accueil.class);
                                         startActivity(redirection);
                                     }
                                     else if(status[0]==1)
                                     {
                                         //redirection ver le Main_3 pour l'utilisateur
-                                        Intent redirection1= new Intent(Main2_users.this, Main3_page_users.class);
+                                        Intent redirection1= new Intent(Main1_connexion.this, Main2_page_users.class);
                                         redirection1.putExtra("username",username);
                                         startActivity(redirection1);
 
@@ -90,7 +84,7 @@ public class Main2_users extends AppCompatActivity {
                                 //Si mdp ou identifiant son mauvais alors affiche messager suivant
                                 else
                                 {
-                                    Toast.makeText(Main2_users.this, "L'utilisateur ou le mot de passe n'est pas reconnu dans la base de donnée.", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Main1_connexion.this, "L'utilisateur ou le mot de passe n'est pas reconnu dans la base de donnée.", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         },
@@ -99,11 +93,11 @@ public class Main2_users extends AppCompatActivity {
                             @Override
                             public void onErrorResponse(VolleyError error)
                             {
-                                Toast.makeText(Main2_users.this, error.toString(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Main1_connexion.this, error.toString(), Toast.LENGTH_SHORT).show();
                             }
                         });
                 //permets d'executer le code dans la page
-                RequestQueue requestQueue = Volley.newRequestQueue(Main2_users.this);
+                RequestQueue requestQueue = Volley.newRequestQueue(Main1_connexion.this);
                 requestQueue.add(stringRequest);
                 // Fin GET
             }

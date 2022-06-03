@@ -23,7 +23,7 @@
             android:name=".Main8_gestion_user"
             android:exported="false" />
         <activity
-            android:name=".Main7_accueil"
+            android:name=".Main4_accueil"
             android:exported="false" />
         <activity
             android:name=".Main6_log"
@@ -32,18 +32,17 @@
             android:name=".Main5_video"
             android:exported="false" />
         <activity
-            android:name=".Main4_boutton_admin"
+            android:name=".Main7_boutton_admin"
             android:exported="false"/>
 
         <activity
-            android:name=".Main3_page_users"
-            android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.DialogWhenLarge"/>
+            android:name=".Main2_page_users"
+            android:exported="false"/>
         <activity
-            android:name=".Main1_broullion"
+            android:name=".Main3_page_supprimer_user"
             android:exported="false" />
         <activity
-            android:name=".Main2_users"
+            android:name=".Main1_connexion"
             android:exported="true"
             android:colorMode="@integer/material_motion_duration_medium_2">
 

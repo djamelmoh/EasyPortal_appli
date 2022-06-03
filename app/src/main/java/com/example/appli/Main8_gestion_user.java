@@ -15,7 +15,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -182,7 +181,7 @@ public class Main8_gestion_user extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View btn_portail) {
-                Intent portail = new Intent(Main8_gestion_user.this, Main4_boutton_admin.class);
+                Intent portail = new Intent(Main8_gestion_user.this, Main7_boutton_admin.class);
                 Toast.makeText(Main8_gestion_user.this, "Ouverture du portail.", Toast.LENGTH_SHORT).show();
                 startActivity(portail);
             }
@@ -202,7 +201,7 @@ public class Main8_gestion_user extends AppCompatActivity {
         button_accueil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View btn_accueil) {
-                Intent accueil = new Intent(Main8_gestion_user.this, Main7_accueil.class);
+                Intent accueil = new Intent(Main8_gestion_user.this, Main4_accueil.class);
                 startActivity(accueil);
             }
         });

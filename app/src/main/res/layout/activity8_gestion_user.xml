@@ -7,6 +7,19 @@
     android:background="@drawable/fond_page"
     tools:context=".Main8_gestion_user">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Page de gestion d'utilisateur"
+        android:textColor="@color/red"
+        android:textSize="45px"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="424dp"
@@ -148,14 +161,16 @@
             android:id="@+id/enregistrer"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Enregistrer" />
+            android:background="@android:color/transparent"
+            android:text="Enregistrer"
+            android:textColor="@color/purple_200"/>
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="409dp"
-        android:layout_height="245dp"
+        android:layout_width="423dp"
+        android:layout_height="248dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -170,7 +185,7 @@
             android:backgroundTint="#FF0000"
             android:text="Supprimer un utilisateur"
             android:textColor="@color/white"
-            android:textSize="25px"/>
+            android:textSize="25px" />
 
         <TextView
             android:id="@+id/textView7"
@@ -191,23 +206,28 @@
 
         <Button
             android:id="@+id/supprimer"
-            android:layout_width="399dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:textColor="@color/purple_200"
             android:text="Supprimer" />
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="407dp"
+            android:layout_height="110dp"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Page de gestion d'utilisateur"
-        android:textColor="@color/red"
-        android:textSize="45px"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/voir_user"
+                android:layout_width="424dp"
+                android:layout_height="132dp"
+                android:background="@android:color/transparent"
+                android:text="Voir utilisateur"
+                tools:layout_editor_absoluteX="-95dp"
+                tools:layout_editor_absoluteY="608dp"
+                android:textColor="@color/purple_200"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

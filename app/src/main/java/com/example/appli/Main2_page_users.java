@@ -30,6 +30,30 @@ public class Main2_page_users extends AppCompatActivity {
         setContentView(R.layout.activity2_page_user);
         //Page d'accueil pour acceder au autre fonctionnalité de l'admin
 
+        //variable boutton deconnexion
+        Button button_retour = (Button) findViewById(R.id.retour);
+        button_retour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View btn_deconnexion) {
+                Intent deconnexion = new Intent(Main2_page_users.this, Main1_connexion.class);
+                startActivity(deconnexion);
+            }
+
+
+        });
+        //variable boutton deconnexion
+        Button button_supprimer_plaque = (Button) findViewById(R.id.supprimer_plaque);
+        button_supprimer_plaque.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View button_supprimer) {
+                Intent supprimer = new Intent(Main2_page_users.this, Main3_page_supprimer_user.class);
+                startActivity(supprimer);
+            }
+
+
+        });
+//----------------------------------------------------------------------------------------
+      //Ouvrir portail
         boolean[] success = new boolean[1];
         final Button btn_ouvrir = (Button) findViewById(R.id.ouvrir);
         String username = getIntent().getExtras().get("username").toString();
@@ -81,18 +105,9 @@ public class Main2_page_users extends AppCompatActivity {
                 // Fin GET
             }
         });
-        //variable boutton deconnexion
-        Button button_retour = (Button) findViewById(R.id.retour);
-        button_retour.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View btn_deconnexion) {
-                Intent deconnexion = new Intent(Main2_page_users.this, Main1_connexion.class);
-                startActivity(deconnexion);
-            }
 
-
-        });
 //-----------------------------------------------------------------------------------------------------------------------------------------------
+      //AJoutrer Plaque
         EditText plaque;
 
         //mise en relation des variables avec le xml
@@ -152,6 +167,8 @@ public class Main2_page_users extends AppCompatActivity {
         });
 
 //-------------------------------------------------------------------------------------------------------------------
+     //Voir les plaques
+
         TextView logText = (TextView) findViewById(R.id.info);
         String url = "http://51.210.151.13/btssnir/projets2022/easyportal/api/plaques.php?owner="+username;
         Toast.makeText(Main2_page_users.this, url, Toast.LENGTH_SHORT).show();
@@ -194,3 +211,6 @@ public class Main2_page_users extends AppCompatActivity {
 
     }
 }
+
+//---------------------------------------------------------------------------------------------------------------------
+

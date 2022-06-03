@@ -102,7 +102,7 @@ public class Main8_gestion_user extends AppCompatActivity {
             }
         });
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+//Supprimer utilisateur
         EditText suppr;
         suppr = (EditText)findViewById(R.id.suppr);
         //int[] status = new int[1];
@@ -214,6 +214,17 @@ public class Main8_gestion_user extends AppCompatActivity {
                 startActivity(log);
             }
         });
+
+        Button button_voir_user = (Button) findViewById(R.id.voir_user);
+        button_voir_user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View voir_user) {
+                Intent voir_user1 = new Intent(Main8_gestion_user.this, Main9_voir_user.class);
+                startActivity(voir_user1);
+            }
+        });
+
+
 //--------------------------------------------------------------------------------------------------
     }
 }

@@ -17,7 +17,9 @@
 
 
 
-
+        <activity
+            android:name=".Main9_voir_user"
+            android:exported="false" />
 
         <activity
             android:name=".Main8_gestion_user"
@@ -40,7 +42,8 @@
             android:exported="false"/>
         <activity
             android:name=".Main3_page_supprimer_user"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.DialogWhenLarge"/>
         <activity
             android:name=".Main1_connexion"
             android:exported="true"

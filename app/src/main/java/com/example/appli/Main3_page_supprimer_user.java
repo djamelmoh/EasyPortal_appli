@@ -29,118 +29,58 @@ public class Main3_page_supprimer_user extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity3_page_user_supprimer);
         //Page d'accueil pour acceder au autre fonctionnalité de l'admin
-
+        EditText plaque_imma;
+        plaque_imma = (EditText)findViewById(R.id.suppr_plaque);
         boolean[] success = new boolean[1];
-        final Button btn_ouvrir = (Button) findViewById(R.id.ouvrir);
-        String username = getIntent().getExtras().get("username").toString();
-        btn_ouvrir.setOnClickListener(new View.OnClickListener() {
+        final Button btn_supprimer=(Button)findViewById(R.id.supprimer_plaque_1);
+       btn_supprimer.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
-                // Debut GET
-                //copnvertir le texte en string
+           public void onClick(View v)
+           {
+//                 Debut GET
+                String plaque_imma_suppr = plaque_imma.getText().toString();
                 //declaration url api
-                String url = "http://51.210.151.13/btssnir/projets2022/easyportal/api/open.php?username=" + username;
+               String url = "http://51.210.151.13/btssnir/projets2022/easyportal/api/supprimerPlaque.php?platenumber="+plaque_imma_suppr;
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
-                                if (response != null) {
+                                if(response!=null)
+                                {
                                     JSONObject jObject = null;
-                                    try {
+                                    try
+                                    {
                                         jObject = new JSONObject(response);
                                         //mise en relation avec l'api
                                         success[0] = jObject.getBoolean("success");
                                         //status[0] = jObject.getInt("status");
-                                        System.out.println("test : " + success[0]);
-                                        if (success[0] == true) {
-                                            //recupere le message de l'api
+                                        System.out.println("test : "+ success[0]);
+
+                                        if(success[0]==true)
+                                        {
                                             String msg = jObject.getString("message");
-                                            Toast.makeText(Main3_page_supprimer_user.this, msg, Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(Main3_page_supprimer_user.this,msg, Toast.LENGTH_SHORT).show();
                                         }
                                         //Sinon
-                                        else {
-                                            //recupere le message de l'api
+                                        else
+                                        {
                                             String msg = jObject.getString("message");
-                                            Toast.makeText(Main3_page_supprimer_user.this, msg, Toast.LENGTH_SHORT).show();
+                                           Toast.makeText(Main3_page_supprimer_user.this, msg, Toast.LENGTH_SHORT).show();
                                         }
-                                    } catch (JSONException e) {
-                                        e.printStackTrace();
+                                    }
+                                    catch (JSONException e)
+                                    {
+                                       e.printStackTrace();
                                     }
                                 }
                             }
                         },
-                        new Response.ErrorListener() {
+                        new Response.ErrorListener()
+                        {
                             @Override
-                            public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(Main3_page_supprimer_user.this, error.toString(), Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                //permets d'executer le code dans la page
-                RequestQueue requestQueue = Volley.newRequestQueue(Main3_page_supprimer_user.this);
-                requestQueue.add(stringRequest);
-                // Fin GET
-            }
-        });
-        //variable boutton deconnexion
-        Button button_retour = (Button) findViewById(R.id.retour);
-        button_retour.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View btn_deconnexion) {
-                Intent deconnexion = new Intent(Main3_page_supprimer_user.this, Main1_connexion.class);
-                startActivity(deconnexion);
-            }
-
-
-        });
-//-----------------------------------------------------------------------------------------------------------------------------------------------
-        EditText plaque;
-
-        //mise en relation des variables avec le xml
-        plaque = (EditText) findViewById(R.id.plaque);
-
-        //Mise en relation bouton enregistrer
-        final Button btn_ajouter = (Button) findViewById(R.id.ajouter);
-        btn_ajouter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Debut GET
-                //copnvertir le texte en string
-                String plaque1 = plaque.getText().toString();
-                //declaration url api
-                String url = "http://51.210.151.13/btssnir/projets2022/easyportal/api/ajouterPlaque.php?owner=" + username + "&platenumber=" + plaque1;
-                StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                        new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                if (response != null) {
-                                    JSONObject jObject = null;
-                                    try {
-                                        jObject = new JSONObject(response);
-                                        //mise en relation avec l'api
-                                        success[0] = jObject.getBoolean("success");
-                                        //status[0] = jObject.getInt("status");
-                                        System.out.println("test : " + success[0]);
-
-                                        if (success[0] == true) {
-                                            //recupere le message de l'api
-                                            String msg = jObject.getString("message");
-                                            Toast.makeText(Main3_page_supprimer_user.this, msg, Toast.LENGTH_SHORT).show();
-                                        }
-                                        //Sinon
-                                        else {
-                                            //recupere le message de l'api
-                                            String msg = jObject.getString("message");
-                                            Toast.makeText(Main3_page_supprimer_user.this, msg, Toast.LENGTH_SHORT).show();
-                                        }
-                                    } catch (JSONException e) {
-                                        e.printStackTrace();
-                                    }
-                                }
-                            }
-                        },
-                        new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
+                            public void onErrorResponse(VolleyError error)
+                            {
                                 Toast.makeText(Main3_page_supprimer_user.this, error.toString(), Toast.LENGTH_SHORT).show();
                             }
                         });
@@ -151,45 +91,5 @@ public class Main3_page_supprimer_user extends AppCompatActivity {
             }
         });
 
-//-------------------------------------------------------------------------------------------------------------------
-        TextView logText = (TextView) findViewById(R.id.info);
-        String url = "http://51.210.151.13/btssnir/projets2022/easyportal/api/plaques.php?owner="+username;
-        Toast.makeText(Main3_page_supprimer_user.this, url, Toast.LENGTH_SHORT).show();
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        if (response != null) {
-                            JSONObject jObject = null;
-                            try {
-                                jObject = new JSONObject(response);
-                                //mise en relation avec l'api
-                                success[0] = jObject.getBoolean("success");
-                                JSONArray rslt = new JSONArray(jObject.getString("result"));
-                                String temp= "MES PLAQUES :\n ";
-                                String nbr ="";
-                                Toast.makeText(Main3_page_supprimer_user.this, nbr.valueOf(rslt.length()), Toast.LENGTH_SHORT).show();
-                                for(int i=0;i<=rslt.length()-1;i++){
-                                    JSONArray plaque = new JSONArray(rslt.getString(i));
-                                    temp += plaque.getString(0)+"\n";
-                                }
-                                logText.setText(temp);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                                Toast.makeText(Main3_page_supprimer_user.this, "message", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    }
-                },
-                new Response.ErrorListener()
-                {
-                    @Override
-                    public void onErrorResponse(VolleyError error)
-                    {
-                        Toast.makeText(Main3_page_supprimer_user.this, error.toString(), Toast.LENGTH_SHORT).show();
-                    }
-                });
-        RequestQueue requestQueue = Volley.newRequestQueue(Main3_page_supprimer_user.this);
-        requestQueue.add(stringRequest);
-
-    }}
+    }
+ }

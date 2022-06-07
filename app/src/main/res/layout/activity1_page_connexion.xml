@@ -54,7 +54,7 @@
                 android:orientation="vertical"
                 android:text="Valider"
                 android:textColor="@color/white"
-                android:textSize="22sp" />
+                android:textSize="40px" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

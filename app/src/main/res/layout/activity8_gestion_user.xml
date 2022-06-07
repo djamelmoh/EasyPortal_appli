@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:text="Ajouter un utilisateur"
             android:textColor="@color/white"
-            android:textSize="25px" />
+            android:textSize="30px" />
 
         <TextView
             android:id="@+id/text"
@@ -185,7 +185,8 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#FF0000"
             android:text="Supprimer un utilisateur"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="30px"/>
 
         <TextView
             android:id="@+id/textView7"

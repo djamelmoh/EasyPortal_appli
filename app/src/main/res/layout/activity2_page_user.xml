@@ -27,8 +27,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="167dp"
-        android:layout_height="72dp"
+        android:layout_width="212dp"
+        android:layout_height="68dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,12 +36,12 @@
 
         <Button
             android:id="@+id/retour"
-            android:layout_width="171dp"
+            android:layout_width="210dp"
             android:layout_height="match_parent"
             android:background="@android:color/transparent"
             android:text="@string/retour"
             android:textColor="@color/red"
-            android:textSize="30px" />
+            android:textSize="40px" />
 
     </LinearLayout>
 
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:text="Ajouter plaque d'immatriculation"
             android:textColor="@color/white"
-            android:textSize="25px" />
+            android:textSize="30px" />
 
         <EditText
             android:id="@+id/plaque"

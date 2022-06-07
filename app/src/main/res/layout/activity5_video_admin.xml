@@ -27,7 +27,7 @@
             android:background="@android:color/transparent"
             android:text="@string/log"
             android:textColor="@color/white"
-            android:textSize="10sp" />
+            android:textSize="30px" />
 
         <Button
             android:id="@+id/portail"
@@ -37,7 +37,7 @@
             android:background="@android:color/transparent"
             android:text="@string/portail"
             android:textColor="@color/white"
-            android:textSize="8sp" />
+            android:textSize="30px" />
 
         <Button
             android:id="@+id/users"
@@ -47,7 +47,7 @@
             android:background="@android:color/transparent"
             android:text="@string/users"
             android:textColor="@color/white"
-            android:textSize="10sp" />
+            android:textSize="30px"/>
 
         <Button
             android:id="@+id/retour"
@@ -57,7 +57,7 @@
             android:background="@android:color/transparent"
             android:text="Accueil"
             android:textColor="@color/white"
-            android:textSize="9sp" />
+            android:textSize="30px" />
 
     </LinearLayout>
 

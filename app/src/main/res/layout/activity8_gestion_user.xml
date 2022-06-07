@@ -39,7 +39,7 @@
             android:background="@android:color/transparent"
             android:text="@string/log"
             android:textColor="@color/white"
-            android:textSize="10sp" />
+            android:textSize="30px" />
 
         <Button
             android:id="@+id/portail"
@@ -49,7 +49,7 @@
             android:background="@android:color/transparent"
             android:text="@string/portail"
             android:textColor="@color/white"
-            android:textSize="8sp" />
+            android:textSize="30px" />
 
         <Button
             android:id="@+id/Image"
@@ -59,7 +59,7 @@
             android:background="@android:color/transparent"
             android:text="@string/button_video"
             android:textColor="@color/white"
-            android:textSize="9sp" />
+            android:textSize="30px" />
 
         <Button
             android:id="@+id/retour"
@@ -69,7 +69,7 @@
             android:background="@android:color/transparent"
             android:text="Accueil"
             android:textColor="@color/white"
-            android:textSize="9sp" />
+            android:textSize="30px"/>
 
     </LinearLayout>
 
@@ -163,7 +163,8 @@
             android:layout_height="50dp"
             android:background="@android:color/transparent"
             android:text="Enregistrer"
-            android:textColor="@color/purple_200"/>
+            android:textColor="@color/purple_200"
+            android:textSize="40px"/>
 
     </LinearLayout>
 
@@ -184,8 +185,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="#FF0000"
             android:text="Supprimer un utilisateur"
-            android:textColor="@color/white"
-            android:textSize="25px" />
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/textView7"
@@ -210,7 +210,8 @@
             android:layout_height="50dp"
             android:background="@android:color/transparent"
             android:textColor="@color/purple_200"
-            android:text="Supprimer" />
+            android:text="Supprimer"
+            android:textSize="40px"/>
 
         <LinearLayout
             android:layout_width="407dp"
@@ -225,7 +226,8 @@
                 android:text="Voir utilisateur"
                 tools:layout_editor_absoluteX="-95dp"
                 tools:layout_editor_absoluteY="608dp"
-                android:textColor="@color/purple_200"/>
+                android:textColor="@color/purple_200"
+                android:textSize="40px"/>
         </LinearLayout>
 
     </LinearLayout>

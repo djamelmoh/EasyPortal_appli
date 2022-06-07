@@ -22,25 +22,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/led_off" />
-        <!--            <ImageView-->
-        <!--                android:id="@+id/image"-->
-        <!--                android:layout_width="590dp"-->
-        <!--                android:layout_height="305dp"-->
-        <!--                android:layout_gravity="center"-->
-        <!--                android:rotation="0"-->
-        <!--                app:srcCompat="@drawable/led_off" />-->
-
-        <!--            <ToggleButton-->
-        <!--                android:id="@+id/on"-->
-        <!--                android:layout_width="474dp"-->
-        <!--                android:layout_height="226dp"-->
-        <!--                android:layout_gravity="center"-->
-        <!--                android:background="@drawable/toggle_on"-->
-        <!--                android:gravity="center"-->
-        <!--                android:text="ToggleButton"-->
-        <!--                android:textOff=" "-->
-        <!--                android:textOn=" " />-->
-
     </LinearLayout>
 
     <LinearLayout
@@ -52,7 +33,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent">
-        <!--        app:layout_constraintTop_toBottomOf="@+id/textView2">-->
 
         <Button
             android:id="@+id/log"
@@ -62,7 +42,7 @@
             android:background="@android:color/transparent"
             android:text="@string/log"
             android:textColor="@color/white"
-            android:textSize="10sp" />
+            android:textSize="30px" />
 
         <Button
             android:id="@+id/users"
@@ -72,7 +52,7 @@
             android:background="@android:color/transparent"
             android:text="@string/users"
             android:textColor="@color/white"
-            android:textSize="10sp" />
+            android:textSize="30px" />
 
         <Button
             android:id="@+id/Image"
@@ -82,7 +62,7 @@
             android:background="@android:color/transparent"
             android:text="@string/button_video"
             android:textColor="@color/white"
-            android:textSize="9sp" />
+            android:textSize="30px"/>
 
         <Button
             android:id="@+id/retour"
@@ -92,7 +72,7 @@
             android:background="@android:color/transparent"
             android:text="Accueil"
             android:textColor="@color/white"
-            android:textSize="9sp" />
+            android:textSize="30px" />
 
     </LinearLayout>
 

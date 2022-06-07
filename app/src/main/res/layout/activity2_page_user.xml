@@ -74,6 +74,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ajouter"
+            android:textSize="40px"
             android:textColor="@color/purple_200"
             android:background="@android:color/transparent"/>
 
@@ -85,7 +86,6 @@
                 android:id="@+id/info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
                 android:textColor="#FFFFFF"
                 android:textSize="25px" />
         </ScrollView>
@@ -95,6 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SUPPRIMER MES PLAQUES"
+            android:textSize="40px"
             android:textColor="@color/purple_200"
             android:background="@android:color/transparent"/>
 

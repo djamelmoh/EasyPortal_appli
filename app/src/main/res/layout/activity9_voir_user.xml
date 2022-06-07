@@ -20,34 +20,15 @@
         tools:layout_editor_absoluteY="2dp" />
 
     <LinearLayout
-        android:id="@+id/linearLayout10"
-        android:layout_width="60dp"
-        android:layout_height="26dp"
+        android:id="@+id/linearLayout11"
+        android:layout_width="404dp"
+        android:layout_height="470dp"
         android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="2dp">
-
-        <Button
-            android:id="@+id/retour_gestion"
-            android:layout_width="59dp"
-            android:layout_height="27dp"
-            android:background="@android:color/transparent"
-            android:text="Retour"
-            android:textSize="20px"
-            android:textColor="@color/purple_200"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout9"
-        android:layout_width="411dp"
-        android:layout_height="439dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -61,6 +42,27 @@
                 android:textColor="#FFFFFF"
                 android:textSize="25px" />
         </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="414dp"
+        android:layout_height="87dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
+
+        <Button
+            android:id="@+id/retour_gestion"
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:background="@android:color/transparent"
+            android:text="Page Précédente"
+            android:textColor="@color/purple_200"
+            android:textSize="40px" />
 
     </LinearLayout>
 

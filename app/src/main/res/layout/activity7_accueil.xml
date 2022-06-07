@@ -24,7 +24,8 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:text="@string/portail"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="30px"/>
 
         <Button
             android:id="@+id/image"
@@ -32,7 +33,8 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:text="@string/button_video"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="30px"/>
 
         <Button
             android:id="@+id/users"
@@ -40,7 +42,8 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:text="@string/users"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="30px"/>
 
         <Button
             android:id="@+id/log"
@@ -48,7 +51,8 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:text="@string/log"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="30px"/>
 
         <Button
             android:id="@+id/deconnexion"
@@ -56,7 +60,8 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:text="@string/deconnexion"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="30px"/>
 
     </LinearLayout>
 

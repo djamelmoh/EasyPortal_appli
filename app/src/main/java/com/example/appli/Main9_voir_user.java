@@ -25,6 +25,7 @@ public class Main9_voir_user extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //lien avec la page layout
         setContentView(R.layout.activity9_voir_user);
 
 

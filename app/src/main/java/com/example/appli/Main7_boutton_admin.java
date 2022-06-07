@@ -22,6 +22,7 @@ public class Main7_boutton_admin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //lien avec la page layout
         setContentView(R.layout.activity4_bouton_admin);
         boolean[] success = new boolean[1];
         final Button btn_ouvrir=(Button)findViewById(R.id.ouvrir);

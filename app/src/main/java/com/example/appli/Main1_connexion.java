@@ -20,13 +20,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Main1_connexion extends AppCompatActivity {
-    //declaration des variables
-    EditText mail;
-    EditText password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//lien avec la page layout
         setContentView(R.layout.activity1_page_connexion);
+//declaration des variables
+        EditText mail;
+        EditText password;
 //mise en relation des variable avec le nom des boutton du xml
         mail = (EditText)findViewById(R.id.email);
         password = (EditText)findViewById(R.id.mdp);
@@ -58,9 +59,9 @@ public class Main1_connexion extends AppCompatActivity {
                                         status[0] = jObject.getInt("status");
                                         System.out.println("test : "+ success[0]);
                                     }
-                                    catch (JSONException e)
+                                    catch (JSONException erreur)
                                     {
-                                        e.printStackTrace();
+                                        erreur.printStackTrace();
                                     }
                                 }
                                 //si l'utilisateur est reconnue alors:

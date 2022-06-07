@@ -13,6 +13,7 @@ public class Main4_accueil extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //lien avec la page layout
         setContentView(R.layout.activity7_accueil);
 
 //--------------------------------------------------------------------------------------------------

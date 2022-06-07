@@ -25,6 +25,7 @@ public class Main6_log extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //lien avec la page layout
         setContentView(R.layout.activity6_log);
         TextView logText = (TextView)findViewById(R.id.log_info);
         boolean[] success = new boolean[1];

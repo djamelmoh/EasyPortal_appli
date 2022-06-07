@@ -27,6 +27,7 @@ public class Main2_page_users extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//lien avec la page layout
         setContentView(R.layout.activity2_page_user);
         //Page d'accueil pour acceder au autre fonctionnalité de l'admin
 
@@ -41,7 +42,7 @@ public class Main2_page_users extends AppCompatActivity {
 
 
         });
-        //variable boutton deconnexion
+        //variable boutton supprimmer plaque
         Button button_supprimer_plaque = (Button) findViewById(R.id.supprimer_plaque);
         button_supprimer_plaque.setOnClickListener(new View.OnClickListener() {
             @Override

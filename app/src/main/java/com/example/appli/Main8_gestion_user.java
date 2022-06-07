@@ -23,6 +23,7 @@ public class Main8_gestion_user extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //lien avec la page layout
         setContentView(R.layout.activity8_gestion_user);
         //declaration des variables
         EditText username;

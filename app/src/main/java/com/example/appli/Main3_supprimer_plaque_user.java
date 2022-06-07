@@ -23,6 +23,7 @@ public class Main3_supprimer_plaque_user extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //lien avec la page layout
         setContentView(R.layout.activity3_page_user_supprimer);
         //Page d'accueil pour acceder au autre fonctionnalité de l'admin
         EditText plaque_imma;

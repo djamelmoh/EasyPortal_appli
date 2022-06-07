@@ -46,7 +46,7 @@ public class Main2_page_users extends AppCompatActivity {
         button_supprimer_plaque.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View button_supprimer) {
-                Intent supprimer = new Intent(Main2_page_users.this, Main3_page_supprimer_user.class);
+                Intent supprimer = new Intent(Main2_page_users.this, Main3_supprimer_plaque_user.class);
                 startActivity(supprimer);
             }
 
@@ -79,7 +79,7 @@ public class Main2_page_users extends AppCompatActivity {
                                         if (success[0] == true) {
                                             //recupere le message de l'api
                                             String msg = jObject.getString("message");
-                                            Toast.makeText(Main2_page_users.this, msg, Toast.LENGTH_SHORT).show();
+                                            //Toast.makeText(Main2_page_users.this, msg, Toast.LENGTH_SHORT).show();
                                         }
                                         //Sinon
                                         else {
@@ -185,7 +185,6 @@ public class Main2_page_users extends AppCompatActivity {
                                 JSONArray rslt = new JSONArray(jObject.getString("result"));
                                 String temp= "MES PLAQUES :\n ";
                                 String nbr ="";
-                                //Toast.makeText(Main3_page_users.this, nbr.valueOf(rslt.length()), Toast.LENGTH_SHORT).show();
                                 for(int i=0;i<=rslt.length()-1;i++){
                                     JSONArray plaque = new JSONArray(rslt.getString(i));
                                     temp += plaque.getString(0)+"\n";

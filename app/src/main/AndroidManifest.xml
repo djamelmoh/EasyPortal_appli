@@ -41,7 +41,7 @@
             android:name=".Main2_page_users"
             android:exported="false"/>
         <activity
-            android:name=".Main3_page_supprimer_user"
+            android:name=".Main3_supprimer_plaque_user"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.DialogWhenLarge"/>
         <activity

@@ -25,7 +25,6 @@
                 android:id="@+id/log_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
                 android:textColor="#FFFFFF"
                 android:textSize="25px" />
         </ScrollView>

@@ -86,6 +86,8 @@ public class Main7_boutton_admin extends AppCompatActivity {
                 // Fin GET
             }
         });
+
+//---------------------------------------------------------------------------------------------------------------------------------
         //variable boutton deconnexion
         Button button_retour = (Button) findViewById(R.id.retour);
         button_retour.setOnClickListener(new View.OnClickListener() {

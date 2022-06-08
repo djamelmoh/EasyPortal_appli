@@ -69,34 +69,42 @@ public class Main2_page_users extends AppCompatActivity {
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
-                                if (response != null) {
+                                if(response!=null)
+                                {
                                     JSONObject jObject = null;
-                                    try {
+                                    try
+                                    {
                                         jObject = new JSONObject(response);
                                         //mise en relation avec l'api
                                         success[0] = jObject.getBoolean("success");
                                         //status[0] = jObject.getInt("status");
-                                        System.out.println("test : " + success[0]);
-                                        if (success[0] == true) {
+                                        System.out.println("test : "+ success[0]);
+                                        if(success[0]==true)
+                                        {
                                             //recupere le message de l'api
                                             String msg = jObject.getString("message");
-                                            //Toast.makeText(Main2_page_users.this, msg, Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(Main2_page_users.this,msg, Toast.LENGTH_SHORT).show();
                                         }
                                         //Sinon
-                                        else {
+                                        else
+                                        {
                                             //recupere le message de l'api
                                             String msg = jObject.getString("message");
                                             Toast.makeText(Main2_page_users.this, msg, Toast.LENGTH_SHORT).show();
                                         }
-                                    } catch (JSONException e) {
+                                    }
+                                    catch (JSONException e)
+                                    {
                                         e.printStackTrace();
                                     }
                                 }
                             }
                         },
-                        new Response.ErrorListener() {
+                        new Response.ErrorListener()
+                        {
                             @Override
-                            public void onErrorResponse(VolleyError error) {
+                            public void onErrorResponse(VolleyError error)
+                            {
                                 Toast.makeText(Main2_page_users.this, error.toString(), Toast.LENGTH_SHORT).show();
                             }
                         });
@@ -172,7 +180,6 @@ public class Main2_page_users extends AppCompatActivity {
 
         TextView logText = (TextView) findViewById(R.id.info);
         String url = "http://51.210.151.13/btssnir/projets2022/easyportal/api/plaques.php?owner="+username;
-        Toast.makeText(Main2_page_users.this, url, Toast.LENGTH_SHORT).show();
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override

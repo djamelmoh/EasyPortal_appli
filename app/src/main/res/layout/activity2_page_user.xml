@@ -20,8 +20,8 @@
 
         <Button
             android:id="@+id/ouvrir"
-            android:layout_width="246dp"
-            android:layout_height="198dp"
+            android:layout_width="271dp"
+            android:layout_height="match_parent"
             android:background="@drawable/led_off" />
     </LinearLayout>
 

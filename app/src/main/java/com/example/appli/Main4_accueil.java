@@ -24,7 +24,6 @@ public class Main4_accueil extends AppCompatActivity {
             @Override
             public void onClick(View btn_portail) {
                 Intent portail = new Intent(Main4_accueil.this, Main7_boutton_admin.class);
-                Toast.makeText(Main4_accueil.this, "Ouverture du portail.", Toast.LENGTH_SHORT).show();
                 startActivity(portail);
             }
         });

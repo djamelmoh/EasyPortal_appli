@@ -8,8 +8,8 @@
     tools:context=".Main7_boutton_admin">
 
     <LinearLayout
-        android:layout_width="582dp"
-        android:layout_height="503dp"
+        android:layout_width="374dp"
+        android:layout_height="405dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,8 +19,8 @@
 
         <Button
             android:id="@+id/ouvrir"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="373dp"
+            android:layout_height="367dp"
             android:background="@drawable/led_off" />
     </LinearLayout>
 
@@ -62,7 +62,7 @@
             android:background="@android:color/transparent"
             android:text="@string/button_video"
             android:textColor="@color/white"
-            android:textSize="30px"/>
+            android:textSize="30px" />
 
         <Button
             android:id="@+id/retour"

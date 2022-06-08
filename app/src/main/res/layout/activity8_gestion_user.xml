@@ -69,7 +69,7 @@
             android:background="@android:color/transparent"
             android:text="Accueil"
             android:textColor="@color/white"
-            android:textSize="30px"/>
+            android:textSize="30px" />
 
     </LinearLayout>
 
@@ -164,7 +164,7 @@
             android:background="@android:color/transparent"
             android:text="Enregistrer"
             android:textColor="@color/purple_200"
-            android:textSize="40px"/>
+            android:textSize="40px" />
 
     </LinearLayout>
 
@@ -184,15 +184,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#FF0000"
-            android:text="Supprimer un utilisateur"
+            android:text="  Supprimer un utilisateur"
             android:textColor="@color/white"
-            android:textSize="30px"/>
+            android:textSize="30px" />
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nom de l'utilisateur"
+            android:text="  Nom de l'utilisateur"
             android:textColor="@color/white" />
 
         <EditText
@@ -210,9 +210,9 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@android:color/transparent"
-            android:textColor="@color/purple_200"
             android:text="Supprimer"
-            android:textSize="40px"/>
+            android:textColor="@color/purple_200"
+            android:textSize="40px" />
 
         <LinearLayout
             android:layout_width="407dp"
@@ -225,10 +225,10 @@
                 android:layout_height="132dp"
                 android:background="@android:color/transparent"
                 android:text="Voir utilisateur"
-                tools:layout_editor_absoluteX="-95dp"
-                tools:layout_editor_absoluteY="608dp"
                 android:textColor="@color/purple_200"
-                android:textSize="40px"/>
+                android:textSize="40px"
+                tools:layout_editor_absoluteX="-95dp"
+                tools:layout_editor_absoluteY="608dp" />
         </LinearLayout>
 
     </LinearLayout>

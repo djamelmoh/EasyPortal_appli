@@ -9,8 +9,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout8"
-        android:layout_width="412dp"
-        android:layout_height="481dp"
+        android:layout_width="364dp"
+        android:layout_height="478dp"
         android:layout_marginTop="147dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:text="Entrer le numéro de la plaque que vous voulez supprimer"
             android:textColor="@color/white"
-            android:textSize="30px"/>
+            android:textSize="30px" />
 
         <EditText
             android:id="@+id/suppr_plaque"
@@ -49,11 +49,10 @@
             android:id="@+id/supprimer_plaque_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SUPPRIMER"
-            android:textSize="40px"
-            android:textColor="@color/purple_200"
             android:background="@android:color/transparent"
-            />
+            android:text="SUPPRIMER"
+            android:textColor="@color/purple_200"
+            android:textSize="40px" />
     </LinearLayout>
 
 

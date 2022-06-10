@@ -184,7 +184,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#FF0000"
-            android:text="  Supprimer un utilisateur"
+            android:text=" Supprimer un utilisateur"
             android:textColor="@color/white"
             android:textSize="30px" />
 
@@ -215,14 +215,14 @@
             android:textSize="40px" />
 
         <LinearLayout
-            android:layout_width="407dp"
-            android:layout_height="110dp"
+            android:layout_width="match_parent"
+            android:layout_height="91dp"
             android:orientation="vertical">
 
             <Button
                 android:id="@+id/voir_user"
-                android:layout_width="424dp"
-                android:layout_height="132dp"
+                android:layout_width="match_parent"
+                android:layout_height="77dp"
                 android:background="@android:color/transparent"
                 android:text="Voir utilisateur"
                 android:textColor="@color/purple_200"

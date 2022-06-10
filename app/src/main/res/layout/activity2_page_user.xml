@@ -80,7 +80,7 @@
             android:background="@android:color/transparent"
             android:text="Ajouter"
             android:textColor="@color/purple_200"
-            android:textSize="40px" />
+            android:textSize="30px" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -101,7 +101,7 @@
             android:background="@android:color/transparent"
             android:text="SUPPRIMER MES PLAQUES"
             android:textColor="@color/purple_200"
-            android:textSize="40px" />
+            android:textSize="30px" />
 
     </LinearLayout>
 

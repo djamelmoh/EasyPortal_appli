@@ -56,6 +56,7 @@ public class Main3_supprimer_plaque_user extends AppCompatActivity {
 
                                         if(success[0]==true)
                                         {
+
                                             String msg = jObject.getString("message");
                                             Toast.makeText(Main3_supprimer_plaque_user.this,msg, Toast.LENGTH_SHORT).show();
                                         }

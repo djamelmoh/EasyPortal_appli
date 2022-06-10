@@ -42,7 +42,9 @@ public class Main6_log extends AppCompatActivity {
                                 jObject = new JSONObject(response);
                                 //mise en relation avec l'api
                                 success[0] = jObject.getBoolean("success");
+                                //informations json on les reconnais grace à l'acolade
                                 JSONObject rslt = new JSONObject(jObject.getString("result"));
+                                //tableau donc "results "
                                 JSONArray logs = new JSONArray(rslt.getString("results"));
                                 String temp= "";
                                 for(int i=0;i<=rslt.getInt("count")-1;i++){

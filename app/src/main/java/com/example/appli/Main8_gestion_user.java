@@ -183,7 +183,6 @@ public class Main8_gestion_user extends AppCompatActivity {
             @Override
             public void onClick(View btn_portail) {
                 Intent portail = new Intent(Main8_gestion_user.this, Main7_boutton_admin.class);
-                Toast.makeText(Main8_gestion_user.this, "Ouverture du portail.", Toast.LENGTH_SHORT).show();
                 startActivity(portail);
             }
         });

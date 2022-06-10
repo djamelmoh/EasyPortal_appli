@@ -81,7 +81,6 @@ public class Main6_log extends AppCompatActivity {
             public void onClick(View btn_portail)
             {
                 Intent portail = new Intent(Main6_log.this, Main7_boutton_admin.class);
-                Toast.makeText(Main6_log.this, "Ouverture du portail.", Toast.LENGTH_SHORT).show();
                 startActivity(portail);
             }
         });

@@ -61,7 +61,6 @@ public class Main5_video extends AppCompatActivity {
             @Override
             public void onClick(View btn_portail) {
                 Intent portail = new Intent(Main5_video.this, Main7_boutton_admin.class);
-                Toast.makeText(Main5_video.this, "Ouverture du portail.", Toast.LENGTH_SHORT).show();
                 startActivity(portail);
             }
         });

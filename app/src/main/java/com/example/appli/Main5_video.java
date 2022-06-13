@@ -22,7 +22,7 @@ public class Main5_video extends AppCompatActivity {
         WebView myWebView = (WebView) findViewById(R.id.webview);
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        myWebView.loadUrl("http://172.16.250.251:8081/");
+        myWebView.loadUrl("http://172.16.200.5:8081/");
 //      myWebView.loadUrl("http://91.81.88.254/");
 
 

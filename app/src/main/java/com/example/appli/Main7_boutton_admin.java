@@ -54,6 +54,7 @@ public class Main7_boutton_admin extends AppCompatActivity {
                                         if(success[0]==true)
                                         {
                                             //recupere le message de l'api
+                                            String url1 = "http://172.16.200.18/i2c.php";
                                             String msg = jObject.getString("message");
                                             Toast.makeText(Main7_boutton_admin.this,msg, Toast.LENGTH_SHORT).show();
                                         }

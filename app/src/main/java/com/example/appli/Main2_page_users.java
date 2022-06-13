@@ -82,6 +82,7 @@ public class Main2_page_users extends AppCompatActivity {
                                         if(success[0]==true)
                                         {
                                             //recupere le message de l'api
+                                            String url1 = "http://172.16.200.18/i2c.php";
                                             String msg = jObject.getString("message");
                                             Toast.makeText(Main2_page_users.this,msg, Toast.LENGTH_SHORT).show();
                                         }
